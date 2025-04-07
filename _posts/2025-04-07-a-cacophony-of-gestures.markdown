@@ -1,5 +1,3 @@
-# A Cacophony of Gestures
-
 ## TL:DR
 We built a gesture control library for Unity. One that isn’t tied to a particular source of input data and works outside XR. It is modelled on an Anticipation, Action, Reaction cycle to help development run smoothly. It’s called Cacophony as a nod to the complexity that arises from the interactions between gestures when building applications with multiple controls.
 
