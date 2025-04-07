@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+5of12 are a Spatial Computing Studio based in the UK. A partnership of Pete Nancollis and Ant Nasce, with 15+ years combined experience in software product development. 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+5of12 specialise in spatial interaction design and solutions for XR, digital out of home, screen-based experiences and mixed media, immersive arts. 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Learn more and get in touch at [5of12.co.uk](https://5of12.co.uk)
