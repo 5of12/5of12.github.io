@@ -18,13 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 5of12 Blogsite
+title: We are 5of12
 email: hello5oftwelve.gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  We are 5of 12. We love spatial computing, building immersive experiences 
+  We are 5of12. We love spatial computing, building immersive experiences 
   and designing apps that encourage play, experimentation & fun.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://fiveoftwelve.gitub.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://fiveoftwelve.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  fiveoftwelve
 
 # Build settings
