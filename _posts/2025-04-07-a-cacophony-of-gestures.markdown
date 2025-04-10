@@ -6,6 +6,8 @@ author: Pete Nancollis
 # TL:DR
 We built a gesture control library for Unity. One that isn’t tied to a particular source of input data and works outside XR. It is modelled on an Anticipation, Action, Reaction cycle to help development run smoothly. It’s called [Cacophony](https://github.com/5of12/cacophony) as a nod to the complexity that arises from the interactions between gestures when building applications with multiple controls.
 
+![Hands in a range of poses. forming confusing gestures](/assets/CacophonyOfGestures.png "Cacophony of gesturing hands")
+
 # Intro 
 Spatial computing applications give us the possibility of using our hands to interact with content without additional controllers. XR headsets such as those from Apple, Meta and Microsoft have built fantastic spatial interaction systems and they provide robust tooling to help developers work with their respective platforms. But what are you to do if you want to apply these techniques outside the XR space?
 
