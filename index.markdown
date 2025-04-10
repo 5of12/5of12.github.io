@@ -6,8 +6,8 @@ layout: home
 
 ---
 
-<img src="assets/CircleMaskMoonLogo.png" width="200px" height="200px"
-        alt="The 5of12 Logo, a dodecahedron in a circle" >
+<img src="assets/5of12_Logo.png" width="200px" height="200px"
+        alt="The 5of12 Logo, a notched circle with 5 coloured pill shapes arrayed like a paw" >
 
 ## What's this all about then?
 

@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   We are 5of12. We love spatial computing, building immersive experiences 
   and designing apps that encourage play, experimentation & fun.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://fiveoftwelve.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  fiveoftwelve
+url: "https://5of12.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  5of12
 
 # Build settings
 theme: minima
