@@ -15,7 +15,7 @@ layout: home
 
 If you find something interesting, or have a project you'd like to talk about, get in touch. 
 
-## CHeck out some examples of our work
+## Check out some examples of our work
 
 ### MediaPipe Playground
 
