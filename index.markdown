@@ -15,3 +15,17 @@ layout: home
 
 If you find something interesting, or have a project you'd like to talk about, get in touch. 
 
+## CHeck out some examples of our work
+
+### MediaPipe Playground
+
+Gesture control running in your browser. Interaction from across the room using comfortable motions centred around you. No headset, no specialised cameras, just you and a webcam!
+
+[5of12.github.io/MediaPipe-Playground](https://5of12.github.io/MediaPipe-Playground)
+
+- 🦈 Give 3D objects a spin, with a single hand!
+  - [Spin The Shark](https://5of12.github.io/MediaPipe-Playground/examples/SpinTheShark.html)
+- 🌌 Head to the stars with pose detections. Engage warp speed!
+  - [Warp Fingers](https://5of12.github.io/MediaPipe-Playground/examples/WarpFingers.html)
+- 🗺️ Explore mapping data with two handed gestures. Pinch and zoom!
+  - [World in your Hands](https://5of12.github.io/MediaPipe-Playground/examples/WorldInYourHands.html)
