@@ -3,19 +3,19 @@ layout: post
 author: Tom Cartwright
 ---
 
-I've recently been working on a looper feature for our musical fidget toy - Playtonik. The idea is to capture a section of the inputted notes and to give the user controls to play the loop back at will.
+I've recently been working on a looper feature for Playtonik, our musical fidget toy. The idea is to capture a section of the inputted notes and to give the user controls to play the loop back at will.
 
 Playtonik is a Unity project and, as anyone who has worked with Unity before probably knows, trying to keep things in sync can sometimes be challenging. This is especially true when it comes to anything that needs to run outside of the update loop.
 
 # The Looper
 
-The Playtonik looper is a "free time" capture system for MIDI note messages. In practice, this is a buffer with a 1ms interval and four note slots per interval up to a arbitrary maximum of 20 seconds.
+The Playtonik looper is a "free time" capture system for MIDI note messages. In practice, this is a buffer with a 1ms interval and four note slots per interval, up to an arbitrary maximum of 20 seconds.
 
 As we're not recording audio samples, 1ms is plenty of fidelity to capture the performed notes to be reproduced with accurate timing.
 
 # The Problem
 
-Enter the Unity update loop problem. In Playtonik, notes are triggered by spawning a "bell" with an attached audio source. As this is couple to the physics system, it must be triggered in the Unity main thread. The problem with this is that neither of Unity's loop systems could be used to play the notes back with accurate timing.
+Enter the Unity update loop problem. In Playtonik, notes are triggered by spawning a "bell" with an attached audio source. As this is coupled to the physics system, it must be triggered in the Unity main thread. The problem is that neither of Unity's loop systems could play the notes back with accurate timing.
 
 The `FixedUpdate` loop is tied to the physics of the app, meaning that changing the duration to match the 1ms interval of the looper buffer drastically changed the core processing of the rest of the application - so isn't appropriate for the looper playback.
 
@@ -29,7 +29,7 @@ This is where things get tricky. For those that don't know, Unity is not thread 
 
 So at this point, we can trigger the notes and we can read the stored MIDI information from the buffer - but we can't link those together due to the threading limitations. Darn.
 
-My first approach was to use the thread to store the note into a concurrent array that could then be accessed in the main thread to play the notes. This did produce some level of playback of the recorded melody, but the timing was off. As the notes were being stored without any information about when they should be played, the update loop would trigger them whenever it got round to it, causing major delays in when the notes sounded.
+My first approach was to use the thread to store the note in a concurrent array that could then be accessed in the main thread to play the notes. This did produce some level of playback of the recorded melody, but the timing was off. As the notes were being stored without timing information, the update loop would trigger them whenever it got round to it, causing major delays in when the notes sounded.
 
 Now we're getting notes out, but they're not as we performed them - which for a music making tool is far from the ideal situation.
 
@@ -39,4 +39,6 @@ Success! The notes being played back now feel much more in time with how they we
 
 # Drawbacks
 
-As with any solution to a problem, there tends to be compromises. The major one with this solution is the timing fidelity in the playback. Whilst we're computing during which frame each note should be played, there is no method of knowing at what point during the frame it should be played. As the fixed update frame is 20ms long in the Playtonik project, this means that there is potential for up to 20ms of error in the timing of the note. This doesn't sound great on paper but I always find that when writing software it pays to be pragmatic, and in this circumstance it comes down to how it feels to use. From all the testing we've done with the app so far, we haven't noticed this delay cause any problems when using the looper. So, whilst it theoretically exists, it's not getting in the way of the intended use so there it shall lie.
+As with any solution to a problem, there tends to be compromises. The major one with this solution is the timing fidelity in the playback. While we compute which frame each note should play in, there is no method of knowing at what point during the frame it should be played. As the fixed update frame is 20ms long in the Playtonik project, this means that there is potential for up to 20ms of error in the timing of the note.
+
+This doesn't sound great on paper but I always find that when writing software it pays to be pragmatic, and in this circumstance it comes down to how it feels to use. From all the testing we've done with the app so far, we haven't noticed this delay cause any problems when using the looper. So, whilst it theoretically exists, it's not getting in the way of the intended use so there it shall lie.
