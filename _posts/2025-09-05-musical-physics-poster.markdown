@@ -72,7 +72,7 @@ Need more audio control? There's a native audio system for that! Create audio co
 
 ### Non-musical timing
 
-Unity is optimised towards visuals not audio. This has the consequence that the frame timing isn’t a great match for musical time - learn how we used threads to manage that for loop recording [here]().
+Unity is optimised towards visuals not audio. This has the consequence that the frame timing isn’t a great match for musical time - learn how we used threads to manage that for loop recording [here]({% post_url 2025-09-04-playtonik-looping %}).
 
 ### Careful with audio quality
 
@@ -86,6 +86,4 @@ Also related - watch out for performance! Unity will use all the resources it ca
 
 ### Plug-in elsewhere?
 
-Whilst Unity has a vast amount of tools to make things easier, that also means that you're locked into their systems and supported platforms - which unfortunately do not include the more audio specific platforms like DAW plugins.
-
-It's possible to run Unity as an engine in another app, but it's not a trival process. More audio focused tools will serve you better if your goal is a VST or AU.
+Whilst Unity has a vast array of tools to make things easier, you are somewhat constrained to the engine's supported output platforms. For instance, (at time of writing), it's not possible to create standard DAW plugins, such as VST / Audio Unit. That said, the ability to publish mobile apps with MIDI connectivity provides users with a way to integrate with other music software and hardware.
