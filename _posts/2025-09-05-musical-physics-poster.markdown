@@ -79,12 +79,12 @@ Unity is optimised towards visuals not audio. This has the consequence that the 
 There are a number of pitfalls when working with audio in Unity. Here are some top tips we've learn by falling into the traps!
 
 - If there are too many sound sources, things will be culled. Make sure it's the quietest sources using priorites.
-- Check those sample rates, on iOS Unity defaults to 24kHz. We found we had to manually force the sample rate via native code and in the Unity Project settings..
+- Check those sample rates! On iOS, Unity defaults to 24kHz. We found we had to manually force the sample rate via native code and in the Unity Project settings..
 - Watch out for memory management. Garbage Collection can cause lost time in your audio stream. Make sure you follow best practices and use pooling techniques when there are a lot of entities entering and leaving the scene.
 
 Also related - watch out for performance! Unity will use all the resources it can - cap the framerate!
 
-### Plug-in elsewhere
+### Plug-in elsewhere?
 
 Whilst Unity has a vast amount of tools to make things easier, that also means that you're locked into their systems and supported platforms - which unfortunately do not include the more audio specific platforms like DAW plugins.
 
