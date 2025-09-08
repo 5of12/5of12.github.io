@@ -4,48 +4,88 @@ title: Musical Physics - Lessons from building music apps in Unity
 author: Pete Nancollis, Ant Nasce, Tom Cartwright
 ---
 
-# Overview
+<img src="/assets/ADC_banner.png" style="border-radius: 15px" />
 
-We built a music app for iOS in the Unity game engine called Playtonik.
+We used the Unity game engine to create Playtonik - an experimental instrument, midi device and fidget toy for iOS.
 
-It's an experimental instrument, midi device and fidget toy that uses the interaction of physics objects to make sounds.
+We chose to use a game engine because it was the fastest place to test to the novel feature of our app: the interaction of physics objects to make sounds.
 
-We chose to use a game engine because it was the fastest place to test to the novel feature of our app: the interactions.
+## Why use a Game Engine?
 
-# Why build a music app in a game engine?
-- Create highly visual products, where animation and interaction are a priority
-- Work with high level or visual programming and scripting languages
-- Easily integrate input devices such as touch and motion controls
-- Build with physics simulations to create dynamic motion effects
-- Targeting multiple platforms easily, including spatial platforms
-- Readily available plugins for features like MIDI connectivity
+### Physics as a playground of sound
 
-# Our tips for music apps in Unity
+Simulations of interacting objects are a fantastic source of sound triggers, allowing for everything from a natural, real feel to something more abstract and chaotic.
 
-A great place to play with spatial mixing
-- All sounds can be played from a point in space, so mixing is as easy as moving an object in a scene
-- Freely blend between 2D and 3D sound placement
+You have control over gravity, damping, mass and everything in between which provides a huge scope for creating different expressive environments.
 
-Sample playback with high numbers of voices
-- Unity can handle a lot of simultaneous samples!
-- Priority system lets you control which sounds get culled when counts get too high
-- Great when triggering sounds from physics simulations
+Unity is a great choice for this as it has highly performant and flexible 2D & 3D physics systems.
 
-Physics as a playground of sound
-- Simulations of interacting objects are a fantastic source of sound triggers, from regular to chaotic
-- Set a low bounce threshold in settings if you want a lively energetic system
-- Set a higher bounce threshold when you want single hits, without bouncing
+**Get Started:** link audio sources to collisions and make the engine your playground.
 
-Watch out for performance. 
-- Unity is optimised towards visuals not audio
-- It will use all the resources it can - cap the framerate!
-- Visual frame timing isn't a great match for musical time - know your frame times
+### Hear the space
 
-Be careful not to degrade audio quality
-- Too many sound sources, things will be culled - make sure it's the quietest sources using priorites
-- Check those sample rates, on iOS Unity defaults to 24kHz - check this link for tips on how to run at 44.1kHz
-- Watch out for memory management - Garbage Collection can cause lost time in your audio stream 
+As the engine is made to create immersive digital worlds, Unity handles 3D spatial audio as standard.
 
-Not the best option if you want to run as a plugin
-- Unity can be run as an engine inn another app, but it's tricky
-- More audio focussed tools will serve you better if your goal is a VST or AU
+Typically, this is focused around a player character but the system is flexible. The `AudioListener` is the scene's microphone which you can free from the camera and position to create the sound you want.
+
+Unity can handle playback of a lot of simultaneous samples, which is great when triggering from physics interactions such as bouncing. The built in tools make this simple to manage too, such as the priority system which lets you control which sounds get culled when counts get too high.
+
+**Get Started:** change the location of the listeners and sources in the space to put the listener in the centre of the action and create a dynamic spatial mix, with minimal effort.
+
+### Visual possibilities
+
+Game engines are built for visuals, with tools for building UI as well as 2D or 3D worlds. Take advantage of this to really make your app pop!
+Music apps benefit from visuals too. Beyond the functional side, an app that gives rich feedback will feel more engaging and help users learn. Use engine features like particle fx, shaders and animation to really make your app sing.
+
+**Get started:** emphasise the collisions in the physics system by creating particle fx at the point of contact. Show direction and intensity so the user can see the sound being created.
+
+<video width=200 height=200 controls autoplay loop style="border-radius: 15px" alt="A small shape bouncing around the inside of a larger shape. Each collision creates lighting and particle effects.">
+  <source src="/assets/ADC_Visuals_Clip.mp4">
+</video>
+
+### There's always MIDI
+
+What would an audio app be without MIDI? Luckily there are open source and commercial plugins available for adding MIDI to Unity.
+If like us, you decide to add MIDI to your physics, watch out! It's really addictive! It's also easy to cause notes to get stuck on in your favourite synth.
+
+Take the time to ensure your note messages are balanced, always send a note off for every note on. These often get lost when objects get destroyed or the app pauses.
+
+### Experimental interactions
+
+Unity makes experimenting with interaction methods very simple. Want to hook into the system's accelerometer to make the shapes comply with real world gravity? There's a nice API for that. Pinches, clicks, drags and everything else - there's battle tested methods to implement different interactions and connect them to practically any parameter of the application.
+
+For example, swiping a finger over the shape in Playtonik will alter its angular velocity, as if you were spinning a globe.
+
+### Build for everywhere
+
+It's super simple to target multiple platforms, with support for most common platforms built into the engine. Any area that the built in tooling doesn't cover likely has a plugin tailor made by the vast Unity developer community.
+
+We've used plugins to handle [MIDI connectivity](https://assetstore.unity.com/packages/tools/audio/midi-plugin-for-mobile-and-desktop-198917) and [scales and notes](https://melanchall.github.io/drywetmidi/).
+
+### Going native
+
+Unity isn't a closed system, you can still work with native code when you need to. Handy for when there's platform specific configuration required or plugins that need system access.
+
+Need more audio control? There's a native audio system for that! Create audio code in C++ then bring back into Unity. Great for writing new audio effects.
+
+## The Drawbacks
+
+### Non-musical timing
+
+Unity is optimised towards visuals not audio. This has the consequence that the frame timing isn’t a great match for musical time - learn how we used threads to manage that for loop recording [here]().
+
+### Careful with audio quality
+
+There are a number of pitfalls when working with audio in Unity. Here are some top tips we've learn by falling into the traps!
+
+- If there are too many sound sources, things will be culled. Make sure it's the quietest sources using priorites.
+- Check those sample rates, on iOS Unity defaults to 24kHz - check this link for tips on how to run at 44.1kHz.
+- Watch out for memory management. Garbage Collection can cause lost time in your audio stream. Make sure you follow best practices and use pooling techniques when there are a lot of entities entering and leaving the scene.
+
+Also related - watch out for performance! Unity will use all the resources it can - cap the framerate!
+
+### Plugins are out
+
+Whilst Unity has a vast amount of tools to make things easier, that also means that you're locked into their systems and supported platforms - which unfortunately do not include the more audio specific platforms like DAW plugins.
+
+It's possible to run Unity as an engine in another app, but it's not a trival process. More audio focused tools will serve you better if your goal is a VST or AU.
