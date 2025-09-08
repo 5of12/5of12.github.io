@@ -6,7 +6,7 @@ author: Pete Nancollis, Ant Nasce, Tom Cartwright
 
 <img src="/assets/ADC_banner.png" style="border-radius: 15px" />
 
-We used the Unity game engine to create Playtonik - an experimental instrument, midi device and fidget toy for iOS.
+We used the Unity game engine to create Playtonik - an experimental musical instrument and fidget toy with MIDI support for iOS.
 
 We chose to use a game engine because it was the fastest place to test to the novel feature of our app: the interaction of physics objects to make sounds.
 
@@ -14,21 +14,21 @@ We chose to use a game engine because it was the fastest place to test to the no
 
 ### Physics as a playground of sound
 
-Simulations of interacting objects are a fantastic source of sound triggers, allowing for everything from a natural, real feel to something more abstract and chaotic.
+Simulations of interacting objects are a fantastic source of sound triggers, allowing for everything from a natural "real feel", to something more abstract and chaotic.
 
-You have control over gravity, damping, mass and everything in between which provides a huge scope for creating different expressive environments.
+You have control over gravity, damping, mass and everything in between, which provides huge scope for creating a variety of expressive environments.
 
-Unity is a great choice for this as it has highly performant and flexible 2D & 3D physics systems.
+Unity is a great choice for this, due to its highly performant and flexible 2D & 3D physics systems.
 
 **Get Started:** link audio sources to collisions and make the engine your playground.
 
 ### Hear the space
 
-As the engine is made to create immersive digital worlds, Unity handles 3D spatial audio as standard.
+As the engine is built for creating immersive digital worlds, Unity handles 3D spatial audio as standard.
 
-Typically, this is focused around a player character but the system is flexible. The `AudioListener` is the scene's microphone which you can free from the camera and position to create the sound you want.
+Typically, this is focused around a player character, but the system is flexible. The `AudioListener` is the scene's microphone, which can be de-coupled from the camera and positioned anywhere to create your desired sound.
 
-Unity can handle playback of a lot of simultaneous samples, which is great when triggering from physics interactions such as bouncing. The built in tools make this simple to manage too, such as the priority system which lets you control which sounds get culled when counts get too high.
+Unity can handle playback of many simultaneous audio samples, which is great when triggering from physics interactions such as bouncing. The `AudioSource` component provides support for Spatial blending of sound, Volume, Pitch and even 'Priority' - which provides control over which sounds are culled when voice count gets too high.
 
 **Get Started:** change the location of the listeners and sources in the space to put the listener in the centre of the action and create a dynamic spatial mix, with minimal effort.
 
@@ -52,19 +52,19 @@ Take the time to ensure your note messages are balanced, always send a note off 
 
 ### Experimental interactions
 
-Unity makes experimenting with interaction methods very simple. Want to hook into the system's accelerometer to make the shapes comply with real world gravity? There's a nice API for that. Pinches, clicks, drags and everything else - there's battle tested methods to implement different interactions and connect them to practically any parameter of the application.
+Unity makes experimenting with interaction methods very simple. Want to hook into the device's motion controls and make shapes comply with real-world gravity? There's a nice API for that. Pinches, taps, drags and everything else - there's battle tested methods to implement different interactions and connect them to practically any parameter of the app.
 
 For example, swiping a finger over the shape in Playtonik will alter its angular velocity, as if you were spinning a globe.
 
 ### Build for everywhere
 
-It's super simple to target multiple platforms, with support for most common platforms built into the engine. Any area that the built in tooling doesn't cover likely has a plugin tailor made by the vast Unity developer community.
+It's super simple to target multiple platforms, with support for most common platforms built into the engine. Any area that the built-in tooling doesn't cover likely has a plugin, tailor-made by the vast Unity developer community.
 
-We've used plugins to handle [MIDI connectivity](https://assetstore.unity.com/packages/tools/audio/midi-plugin-for-mobile-and-desktop-198917) and [scales and notes](https://melanchall.github.io/drywetmidi/).
+We've used plugins to handle [MIDI connectivity](https://assetstore.unity.com/packages/tools/audio/midi-plugin-for-mobile-and-desktop-198917) and [musical scale theory](https://melanchall.github.io/drywetmidi/).
 
 ### Going native
 
-Unity isn't a closed system, you can still work with native code when you need to. Handy for when there's platform specific configuration required or plugins that need system access.
+Unity isn't a closed system - you can still work with native code when you need to. This is handy for when there's platform specific configuration required or plugins that need system access.
 
 Need more audio control? There's a native audio system for that! Create audio code in C++ then bring back into Unity. Great for writing new audio effects.
 
@@ -79,12 +79,12 @@ Unity is optimised towards visuals not audio. This has the consequence that the 
 There are a number of pitfalls when working with audio in Unity. Here are some top tips we've learn by falling into the traps!
 
 - If there are too many sound sources, things will be culled. Make sure it's the quietest sources using priorites.
-- Check those sample rates, on iOS Unity defaults to 24kHz - check this link for tips on how to run at 44.1kHz.
+- Check those sample rates, on iOS Unity defaults to 24kHz. We found we had to manually force the sample rate via native code and in the Unity Project settings..
 - Watch out for memory management. Garbage Collection can cause lost time in your audio stream. Make sure you follow best practices and use pooling techniques when there are a lot of entities entering and leaving the scene.
 
 Also related - watch out for performance! Unity will use all the resources it can - cap the framerate!
 
-### Plugins are out
+### Plug-in elsewhere
 
 Whilst Unity has a vast amount of tools to make things easier, that also means that you're locked into their systems and supported platforms - which unfortunately do not include the more audio specific platforms like DAW plugins.
 
