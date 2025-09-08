@@ -14,13 +14,19 @@ We chose to use a game engine because it was the fastest place to test to the no
 
 ### Physics as a playground of sound
 
+
+
 Simulations of interacting objects are a fantastic source of sound triggers, allowing for everything from a natural "real feel", to something more abstract and chaotic.
 
 You have control over gravity, damping, mass and everything in between, which provides huge scope for creating a variety of expressive environments.
 
 Unity is a great choice for this, due to its highly performant and flexible 2D & 3D physics systems.
 
+<video width="100%" controls autoplay muted loop style="border-radius: 15px" alt="A tetrahedron, cube, octagedron, dodecahedron and icosahedron shown in sequence. Inside the shape notes bounce around as smaller versions of the shape. Each shape has different physics behaviour.">
+  <source src="/assets/ADC_Bounce_Wide.mp4" />
+</video>
 **Get Started:** link audio sources to collisions and make the engine your playground.
+
 
 ### Hear the space
 
@@ -29,6 +35,10 @@ As the engine is built for creating immersive digital worlds, Unity handles 3D s
 Typically, this is focused around a player character, but the system is flexible. The `AudioListener` is the scene's microphone, which can be de-coupled from the camera and positioned anywhere to create your desired sound.
 
 Unity can handle playback of many simultaneous audio samples, which is great when triggering from physics interactions such as bouncing. The `AudioSource` component provides support for Spatial blending of sound, Volume, Pitch and even 'Priority' - which provides control over which sounds are culled when voice count gets too high.
+
+<video width=400 height=400 autoplay muted controls loop style="border-radius: 15px" alt="A small shape bouncing around the inside of a larger shape. Each collision creates an audio source shown by a speaker icon">
+  <source src="/assets/ADC_Noisy_Bounces_Clip.mp4" />
+</video>
 
 **Get Started:** change the location of the listeners and sources in the space to put the listener in the centre of the action and create a dynamic spatial mix, with minimal effort.
 
@@ -39,8 +49,8 @@ Music apps benefit from visuals too. Beyond the functional side, an app that giv
 
 **Get started:** emphasise the collisions in the physics system by creating particle fx at the point of contact. Show direction and intensity so the user can see the sound being created.
 
-<video width=200 height=200 controls autoplay loop style="border-radius: 15px" alt="A small shape bouncing around the inside of a larger shape. Each collision creates lighting and particle effects.">
-  <source src="/assets/ADC_Visuals_Clip.mp4">
+<video width=400 height=400 autoplay muted controls loop style="border-radius: 15px" alt="A small shape bouncing around the inside of a larger shape. Each collision creates lighting and particle effects.">
+  <source src="/assets/ADC_Visuals_Clip.mp4" />
 </video>
 
 ### There's always MIDI
@@ -81,6 +91,9 @@ There are a number of pitfalls when working with audio in Unity. Here are some t
 - If there are too many sound sources, things will be culled. Make sure it's the quietest sources using priorites.
 - Check those sample rates! On iOS, Unity defaults to 24kHz. We found we had to manually force the sample rate via native code and in the Unity Project settings.
 - Watch out for memory management. Garbage Collection can cause lost time in your audio stream. Make sure you follow best practices and use pooling techniques when there are a lot of entities entering and leaving the scene.
+
+<img src="/assets/ADC_Profiler_View.png" style="border-radius: 15px" alt="A screenshot of the Unity performancee profiler. Highlighted are peaks associated with memory garbagee collection and an overlayed snippet of audio, showing lost time int he waveform./>
+
 
 Also related - watch out for performance! Unity will use all the resources it can - cap the framerate!
 
