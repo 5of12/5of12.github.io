@@ -5,6 +5,11 @@ author: Tom Cartwright
 
 <iframe width="100%" src="https://www.youtube.com/embed/ByBfa3axGeE?si=slml7JWGrF8-ROK1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px; aspect-ratio: 1.78"></iframe>
 
+Get Playtonik on the [App Store](https://apple.co/4oTOgyW)
+
+---
+
+<br>
 I've recently been working on a looper feature for Playtonik, our musical fidget toy. The idea is to capture a section of the inputted notes and to give the user controls to play the loop back at will.
 
 Playtonik is a Unity project and, as anyone who has worked with Unity before probably knows, trying to keep things in sync can sometimes be challenging. This is especially true when it comes to anything that needs to run outside of the update loop.
