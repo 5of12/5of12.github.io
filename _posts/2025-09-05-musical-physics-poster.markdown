@@ -14,7 +14,7 @@ We chose to use a game engine because it was the fastest place to test to the no
 
 ### Physics as a playground of sound
 
-
+<img src="/assets/ADC_PlaygroundOfSound.png" style="border-radius: 15px" alt="A graphic showing a line drawing of a waveform. A person is swinginng from the waveform as though in a playground."/>
 
 Simulations of interacting objects are a fantastic source of sound triggers, allowing for everything from a natural "real feel", to something more abstract and chaotic.
 
@@ -62,11 +62,15 @@ Take the time to ensure your note messages are balanced, always send a note off 
 
 ### Experimental interactions
 
+<img  src="/assets/ADC_Interactions.png" style="border-radius: 15px" alt="A graphic showing a symbols for tapping, touching, swiping, pinching, shaking and a piano keyboard."/>
+
 Unity makes experimenting with interaction methods very simple. Want to hook into the device's motion controls and make shapes comply with real-world gravity? There's a nice API for that. Pinches, taps, drags and everything else - there's battle tested methods to implement different interactions and connect them to practically any parameter of the app.
 
 For example, swiping a finger over the shape in Playtonik will alter its angular velocity, as if you were spinning a globe.
 
 ### Build for everywhere
+
+<img src="/assets/ADC_BuildEverywhere.png" style="border-radius: 15px" alt="A graphic showing a collection of tablet, laptop and phone devices. All screens show the same application icon"/>
 
 It's super simple to target multiple platforms, with support for most common platforms built into the engine. Any area that the built-in tooling doesn't cover likely has a plugin, tailor-made by the vast Unity developer community.
 
@@ -82,6 +86,8 @@ Need more audio control? There's a native audio system for that! Create audio co
 
 ### Non-musical timing
 
+<img src="/assets/ADC_NonMusicalTiming.png" style="border-radius: 15px" alt="A graphic with the text FPS vs BPM. The graphics shows a sequence of regular notches on the top and another sequnce on the bottom that is slighlty out of sync."/>
+
 Unity is optimised towards visuals not audio. This has the consequence that the frame timing isn’t a great match for musical time - learn how we used threads to manage that for loop recording [here]({% post_url 2025-09-04-playtonik-looping %}).
 
 ### Careful with audio quality
@@ -92,11 +98,13 @@ There are a number of pitfalls when working with audio in Unity. Here are some t
 - Check those sample rates! On iOS, Unity defaults to 24kHz. We found we had to manually force the sample rate via native code and in the Unity Project settings.
 - Watch out for memory management. Garbage Collection can cause lost time in your audio stream. Make sure you follow best practices and use pooling techniques when there are a lot of entities entering and leaving the scene.
 
-<img src="/assets/ADC_Profiler_View.png" style="border-radius: 15px" alt="A screenshot of the Unity performancee profiler. Highlighted are peaks associated with memory garbagee collection and an overlayed snippet of audio, showing lost time int he waveform./>
+<img src="/assets/ADC_Profiler_View.png" style="border-radius: 15px" alt="A screenshot of the Unity performancee profiler. Highlighted are peaks associated with memory garbagee collection and an overlayed snippet of audio, showing lost time int he waveform."/>
 
 
 Also related - watch out for performance! Unity will use all the resources it can - cap the framerate!
 
 ### Plug-in elsewhere?
+
+<img src="/assets/ADC_PluginsQuestion.png" style="border-radius: 15px" alt="A graphic showing a plug and socket. The plug is marked Unity and the socket DAW. A question mark separates them with the text VST/AU"/>
 
 Whilst Unity has a vast array of tools to make things easier, you are somewhat constrained to the engine's supported output platforms. For instance, (at time of writing), it's not possible to create standard DAW plugins, such as VST / Audio Unit. That said, the ability to publish mobile apps with MIDI connectivity provides users with a way to integrate with other music software and hardware.
