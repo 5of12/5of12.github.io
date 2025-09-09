@@ -55,6 +55,8 @@ Music apps benefit from visuals too. Beyond the functional side, an app that giv
 
 ### There's always MIDI
 
+<img  src="/assets/ADC_AlwaysMidi.png" style="border-radius: 15px" alt="A graphic showing a tablet conneced to the MIDI logo with a line, then connected to two icon representations of MIDI devices."/>
+
 What would an audio app be without MIDI? Luckily there are open source and commercial plugins available for adding MIDI to Unity.
 If like us, you decide to add MIDI to your physics, watch out! It's really addictive! It's also easy to cause notes to get stuck on in your favourite synth.
 
