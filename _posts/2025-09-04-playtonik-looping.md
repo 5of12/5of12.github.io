@@ -3,6 +3,13 @@ layout: post
 author: Tom Cartwright
 ---
 
+<iframe width="100%" src="https://www.youtube.com/embed/ByBfa3axGeE?si=slml7JWGrF8-ROK1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px; aspect-ratio: 1.78"></iframe>
+
+Get Playtonik on the [App Store](https://apple.co/4oTOgyW)
+
+---
+
+<br>
 I've recently been working on a looper feature for Playtonik, our musical fidget toy. The idea is to capture a section of the inputted notes and to give the user controls to play the loop back at will.
 
 Playtonik is a Unity project and, as anyone who has worked with Unity before probably knows, trying to keep things in sync can sometimes be challenging. This is especially true when it comes to anything that needs to run outside of the update loop.
@@ -12,6 +19,8 @@ Playtonik is a Unity project and, as anyone who has worked with Unity before pro
 The Playtonik looper is a "free time" capture system for MIDI note messages. In practice, this is a buffer with a 1ms interval and four note slots per interval, up to an arbitrary maximum of 20 seconds.
 
 As we're not recording audio samples, 1ms is plenty of fidelity to capture the performed notes to be reproduced with accurate timing.
+
+![](/assets/looper/buffer_diagram.jpg)
 
 # The Problem
 
@@ -34,6 +43,8 @@ My first approach was to use the thread to store the note in a concurrent array 
 Now we're getting notes out, but they're not as we performed them - which for a music making tool is far from the ideal situation.
 
 To get around this, I thought of using the playback thread as a lookahead process instead of triggering the notes directly. Each fixed update frame, the thread will run and gather all the notes that should be played in the following frame. These notes are then collected into a buffer which can be read from the main thread, meaning that each frame only plays notes that should be played in that window of time.
+
+<img src="/assets//looper/lookahead_diagram.jpg" style="width: 100%">
 
 Success! The notes being played back now feel much more in time with how they were originally performed and the feature feels much more useful.
 
