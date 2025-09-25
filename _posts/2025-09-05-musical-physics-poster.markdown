@@ -22,8 +22,8 @@ You have control over gravity, damping, mass and everything in between, which pr
 
 Unity is a great choice for this, due to its highly performant and flexible 2D & 3D physics systems.
 
-<video width="100%" controls autoplay muted loop style="border-radius: 15px" alt="A tetrahedron, cube, octagedron, dodecahedron and icosahedron shown in sequence. Inside the shape notes bounce around as smaller versions of the shape. Each shape has different physics behaviour.">
-  <source src="/assets/ADC_Bounce_Wide.mp4" />
+<video width="100%" controls autoplay muted loop style="border-radius: 15px" alt="">
+  <source src="/assets/ADC_Playground_Clip.mp4" />
 </video>
 **Get Started:** link audio sources to collisions and make the engine your playground.
 
@@ -38,8 +38,8 @@ Typically, this is focused around a player character, but the system is flexible
 
 Unity can handle playback of many simultaneous audio samples, which is great when triggering from physics interactions such as bouncing. The `AudioSource` component provides support for Spatial blending of sound, Volume, Pitch and even 'Priority' - which provides control over which sounds are culled when voice count gets too high.
 
-<video width=400 height=400 autoplay muted controls loop style="border-radius: 15px" alt="">
-  <source src="/assets/ADC_Noisy_Bounces_Clip.mp4" />
+<video width="100%" autoplay muted controls loop style="border-radius: 15px" alt="">
+  <source src="/assets/ADC_Audio_Clip.mp4" />
 </video>
 
 **Get Started:** change the location of the listeners and sources in the space to put the listener in the centre of the action and create a dynamic spatial mix, with minimal effort.
@@ -53,7 +53,7 @@ Music apps benefit from visuals too. Beyond the functional side, an app that giv
 
 **Get started:** emphasise the collisions in the physics system by creating particle fx at the point of contact. Show direction and intensity so the user can see the sound being created.
 
-<video width=400 height=400 autoplay muted controls loop style="border-radius: 15px" alt="A small shape bouncing around the inside of a larger shape. Each collision creates lighting and particle effects.">
+<video width="100%" autoplay muted controls loop style="border-radius: 15px" alt="">
   <source src="/assets/ADC_Visuals_Clip.mp4" />
 </video>
 
