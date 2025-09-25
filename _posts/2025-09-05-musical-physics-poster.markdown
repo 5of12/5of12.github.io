@@ -14,15 +14,23 @@ We chose to use a game engine because it was the fastest place to test to the no
 
 ### Physics as a playground of sound
 
+<img src="/assets/ADC_PlaygroundOfSound.png" style="border-radius: 15px" alt=""/>
+
 Simulations of interacting objects are a fantastic source of sound triggers, allowing for everything from a natural "real feel", to something more abstract and chaotic.
 
 You have control over gravity, damping, mass and everything in between, which provides huge scope for creating a variety of expressive environments.
 
 Unity is a great choice for this, due to its highly performant and flexible 2D & 3D physics systems.
 
+<video width="100%" controls loop style="border-radius: 15px" alt="">
+  <source src="/assets/ADC_Playground_Clip.mp4" />
+</video>
 **Get Started:** link audio sources to collisions and make the engine your playground.
 
+
 ### Hear the space
+
+<img src="/assets/ADC_SoundAllAround.png" style="border-radius: 15px" alt=""/>
 
 As the engine is built for creating immersive digital worlds, Unity handles 3D spatial audio as standard.
 
@@ -30,20 +38,28 @@ Typically, this is focused around a player character, but the system is flexible
 
 Unity can handle playback of many simultaneous audio samples, which is great when triggering from physics interactions such as bouncing. The `AudioSource` component provides support for Spatial blending of sound, Volume, Pitch and even 'Priority' - which provides control over which sounds are culled when voice count gets too high.
 
+<video width="100%" controls loop style="border-radius: 15px" alt="">
+  <source src="/assets/ADC_Audio_Clip.mp4" />
+</video>
+
 **Get Started:** change the location of the listeners and sources in the space to put the listener in the centre of the action and create a dynamic spatial mix, with minimal effort.
 
 ### Visual possibilities
+
+<img src="/assets/ADC_VisualPossibilities.png" style="border-radius: 15px" alt=""/>
 
 Game engines are built for visuals, with tools for building UI as well as 2D or 3D worlds. Take advantage of this to really make your app pop!
 Music apps benefit from visuals too. Beyond the functional side, an app that gives rich feedback will feel more engaging and help users learn. Use engine features like particle fx, shaders and animation to really make your app sing.
 
 **Get started:** emphasise the collisions in the physics system by creating particle fx at the point of contact. Show direction and intensity so the user can see the sound being created.
 
-<video width=200 height=200 controls autoplay loop style="border-radius: 15px" alt="A small shape bouncing around the inside of a larger shape. Each collision creates lighting and particle effects.">
-  <source src="/assets/ADC_Visuals_Clip.mp4">
+<video width="100%" controls loop style="border-radius: 15px" alt="">
+  <source src="/assets/ADC_Visuals_Clip.mp4" />
 </video>
 
 ### There's always MIDI
+
+<img  src="/assets/ADC_AlwaysMidi.png" style="border-radius: 15px" alt=""/>
 
 What would an audio app be without MIDI? Luckily there are open source and commercial plugins available for adding MIDI to Unity.
 If like us, you decide to add MIDI to your physics, watch out! It's really addictive! It's also easy to cause notes to get stuck on in your favourite synth.
@@ -52,11 +68,15 @@ Take the time to ensure your note messages are balanced, always send a note off 
 
 ### Experimental interactions
 
+<img  src="/assets/ADC_Interactions.png" style="border-radius: 15px" alt=""/>
+
 Unity makes experimenting with interaction methods very simple. Want to hook into the device's motion controls and make shapes comply with real-world gravity? There's a nice API for that. Pinches, taps, drags and everything else - there's battle tested methods to implement different interactions and connect them to practically any parameter of the app.
 
 For example, swiping a finger over the shape in Playtonik will alter its angular velocity, as if you were spinning a globe.
 
 ### Build for everywhere
+
+<img src="/assets/ADC_BuildEverywhere.png" style="border-radius: 15px" alt=""/>
 
 It's super simple to target multiple platforms, with support for most common platforms built into the engine. Any area that the built-in tooling doesn't cover likely has a plugin, tailor-made by the vast Unity developer community.
 
@@ -72,6 +92,8 @@ Need more audio control? There's a native audio system for that! Create audio co
 
 ### Non-musical timing
 
+<img src="/assets/ADC_NonMusicalTiming.png" style="border-radius: 15px" alt=""/>
+
 Unity is optimised towards visuals not audio. This has the consequence that the frame timing isn’t a great match for musical time - learn how we used threads to manage that for loop recording [here]({% post_url 2025-09-04-playtonik-looping %}).
 
 ### Careful with audio quality
@@ -82,8 +104,13 @@ There are a number of pitfalls when working with audio in Unity. Here are some t
 - Check those sample rates! On iOS, Unity defaults to 24kHz. We found we had to manually force the sample rate via native code and in the Unity Project settings.
 - Watch out for memory management. Garbage Collection can cause lost time in your audio stream. Make sure you follow best practices and use pooling techniques when there are a lot of entities entering and leaving the scene.
 
+<img src="/assets/ADC_Profiler_View.png" style="border-radius: 15px" alt=""/>
+
+
 Also related - watch out for performance! Unity will use all the resources it can - cap the framerate!
 
 ### Plug-in elsewhere?
+
+<img src="/assets/ADC_PluginsQuestion.png" style="border-radius: 15px" alt=""/>
 
 Whilst Unity has a vast array of tools to make things easier, you are somewhat constrained to the engine's supported output platforms. For instance, (at time of writing), it's not possible to create standard DAW plugins, such as VST / Audio Unit. That said, the ability to publish mobile apps with MIDI connectivity provides users with a way to integrate with other music software and hardware.
