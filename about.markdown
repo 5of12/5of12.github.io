@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-5of12 are a Spatial Computing Studio based in the UK. A partnership formed by Pete Nancollis and Ant Nasce, with 15+ years combined experience in software product development.
+5of12 are a Spatial Computing Studio based in the UK. A partnership formed out of ex-Ultraleap coleagues, with 15+ years combined experience in software product development.
 
 5of12 specialise in spatial interaction design and solutions for XR, digital out of home, screen-based experiences and mixed media, immersive arts. 
 
