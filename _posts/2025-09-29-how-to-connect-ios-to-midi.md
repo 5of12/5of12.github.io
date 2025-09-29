@@ -76,5 +76,5 @@ Note: As of Playtonik 1.5 the app doesn't show up as a virtual MIDI port. Playto
 
 # Find out more
 
-If you want to find out more abou Playtonik check out our website [5of12.co.uk](https://www.5of12.co.uk/#Playtonik)
+If you want to find out more about Playtonik check out our website [5of12.co.uk](https://www.5of12.co.uk/#Playtonik)
 To see some examples of how we've integrated Playtonik into our music setups check out our [Playtonik Playlist on YouTube](https://www.youtube.com/playlist?list=PL4zuBsU0ueMlLnphaBhRjQ5iLQO9R2qMJ)
