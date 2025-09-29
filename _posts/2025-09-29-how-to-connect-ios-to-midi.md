@@ -36,7 +36,7 @@ iOS supports MIDI connections across a local network. This works over WiFi and c
 - In the devices panel, select your iPhone/iPad and tap Connect
 - Open Midi Settings in your DAW, you should now see the network session as an available MIDI input/output
 
-<img src="/assets/iOSmidi/NetworkMidiSetup.png" style="border-radius: 15px" alt=""/>
+<img src="/assets/iOSmidi/NetworkMIDISetup.png" style="border-radius: 15px" alt=""/>
 
 Ableton have a nice guide for [Setting up a virtual MIDI network](https://help.ableton.com/hc/en-us/articles/209071169-Setting-up-a-virtual-MIDI-network) which has some details of how it works on different platforms
 
