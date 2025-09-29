@@ -73,3 +73,8 @@ Fugue machine example:
 <img src="/assets/iOSmidi/VirtualDeviceSetup.png" style="border-radius: 15px" alt=""/>
 
 Note: As of Playtonik 1.5 the app doesn't show up as a virtual MIDI port. Playtonik can connect to other apps that share a virtual port, but not every app does. We have only tested with Fugue Machine, Korg Gadget & Logic Pro (iPad).
+
+# Find out more
+
+If you want to find out more abou Playtonik check out our website [5of12.co.uk](https://www.5of12.co.uk/#Playtonik)
+To see some examples of how we've integrated Playtonik into our music setups check out our [Playtonik Playlist on YouTube](https://www.youtube.com/playlist?list=PL4zuBsU0ueMlLnphaBhRjQ5iLQO9R2qMJ)
