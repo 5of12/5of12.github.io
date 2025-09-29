@@ -4,7 +4,7 @@ author: Pete Nancollis
 title: How to connect iOS to MIDI for Playtonik
 ---
 
-Playtonik is a MIDI Innovation Award winning musical fidget toy for iPhone and iPad. We built Playtonik to be fun to play with straight out of tthe box, with no external gear, but for those of you with hardware or software synths there's a whole other layer of fun. That is if you can figure out the slightly strange setup of getting your iPhone (or iPad) to work as a MIDI device.
+Playtonik is a MIDI Innovation Award winning musical fidget toy for iPhone and iPad. We built Playtonik to be fun to play with straight out of the box, with no external gear, but for those of you with hardware or software synths there's a whole other layer of fun. That is if you can figure out the slightly strange setup of getting your iPhone (or iPad) to work as a MIDI device.
 
 This is a guide to some of the methods we've been using to connect Playtonik to our favourite instruments and tools. We're an Apple Mac based team, so that does mean our instructions are biased towards that platform. MIDI works everywhere though, so hopefully you can still learn from this guide and make it work for you. If you have tips for getting things set up on other platforms, get in touch!
 
@@ -19,7 +19,9 @@ We've not found a similar setup for connecting to Windows or Linux systems. If y
 - In the devices list look for the iPhone or iPad
 - Press the "Enable" button to activate the connection
 - Open Midi Settings in your DAW, you should now see your device as an available MIDI input/output
-- In Playtonik, tap the settings cog in the top right, then select the "?" device in the MIDI Input/Ouput dropdown.
+- In Playtonik, tap the settings cog in the top right, then select the "IDAM MIDI HOST" device in the MIDI Input/Ouput dropdown.
+
+<img src="/assets/iOSmidi/USBSetup.png" style="border-radius: 15px" alt=""/>
 
 If your iPhone or iPad has a USB-C connector, then you can also connect directly to many USB audio/MIDI interfaces, keyboards and instruments. This can limit onward connectivity with a DAW but it is great if you just want to hook up Playtonik and a synth for a quick jam. 
 
@@ -34,6 +36,8 @@ iOS supports MIDI connections across a local network. This works over WiFi and c
 - In the devices panel, select your iPhone/iPad and tap Connect
 - Open Midi Settings in your DAW, you should now see the network session as an available MIDI input/output
 
+<img src="/assets/iOSmidi/NetworkMidiSetup.png" style="border-radius: 15px" alt=""/>
+
 Ableton have a nice guide for [Setting up a virtual MIDI network](https://help.ableton.com/hc/en-us/articles/209071169-Setting-up-a-virtual-MIDI-network) which has some details of how it works on different platforms
 
 # Bluetooth MIDI
@@ -43,10 +47,12 @@ Bluetooth MIDI is best for connecting direct to other instruments, but can also 
 - Open Audio Midi Settings on the Mac
 - Open the Midi Studio Window, then tap the Bluetooth icon in the top right to get the Bluetooth setup window
 - Set your Mac to "Advertise" itself to local devices
-- In Playtonik, tap the settings cog in the top right then tap th Bluetooth icon
+- In Playtonik, tap the settings cog in the top right then tap the Bluetooth icon
 - The system dialogue for device pairing will open, select your Mac and pair it with your iPhone/iPad
 - Close the Bluetooth dialog, then select the Bluetooth option in the MIDI Input/Output dropdown
 - Open Midi Settings in your DAW, you should now see the Bluetooth connection as an available MIDI input/output
+
+<img src="/assets/iOSmidi/BluetoothMidiSetup.png" style="border-radius: 15px" alt=""/>
 
 For a Bluetooth MIDI instrument, follow the pairing process for your device using the Bluetooth dialog in Playtonik.
 
@@ -60,8 +66,10 @@ Fugue machine example:
 - Open Fugue Machine and tap the ... icon in the top right
 - Enable MIDI Out via Settings screen using the "Fugue Machine MIDI Out" option
 - Pick a pattern and press play
-- Open Playotnik and go tap the settings cog icon
+- Open Playtonik and go tap the settings cog icon
 - Select the Fugue Machine MIDI as the device
 - Notes from the Fugue pattern will trigger in Playtonik
 
-Note: As of Playtonik 1.5 the app doesn't show up as a virtual MIDI port. Playtonik can connect to other apps that share a virual port, but not every app does. We have only tested with Fugue Machine, Korg Gadget & Logic Pro (iPad).
+<img src="/assets/iOSmidi/VirtualDeviceSetup.png" style="border-radius: 15px" alt=""/>
+
+Note: As of Playtonik 1.5 the app doesn't show up as a virtual MIDI port. Playtonik can connect to other apps that share a virtual port, but not every app does. We have only tested with Fugue Machine, Korg Gadget & Logic Pro (iPad).
