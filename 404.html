@@ -3,6 +3,18 @@ permalink: /404.html
 layout: page
 ---
 
+<script>
+  (function () {
+    var match = /^\/midiweb-hub(?=\/|$)/i;
+    var path = window.location.pathname;
+    if (!match.test(path)) return;
+
+    var rest = path.replace(match, '');
+    var destination = '/MIDIWeb-Hub' + rest + window.location.search + window.location.hash;
+    window.location.replace(destination);
+  })();
+</script>
+
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
