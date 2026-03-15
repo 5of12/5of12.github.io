@@ -57,7 +57,7 @@ Gesture control running in your browser. Interaction from across the room using 
         <h3 class="experiment-card__title">Pocket Operations</h3>
         <p class="experiment-card__body">A browser-based MIDI pattern recorder for sketching drum patterns, auditioning grooves, sending them to hardware over Web MIDI, and exporting loops as <code>.midi</code> files.</p>
         <div class="experiment-card__links">
-          <a class="experiment-card__link experiment-card__link--primary" href="https://5of12.github.io/PocketOperations/">Open Experiment</a>
+          <a class="experiment-card__link experiment-card__link--primary" href="https://5of12.github.io/PocketOperations/">Launch</a>
           <a class="experiment-card__link" href="https://github.com/5of12/PocketOperations">View on GitHub</a>
         </div>
       </div>
@@ -78,7 +78,7 @@ Gesture control running in your browser. Interaction from across the room using 
         <h3 class="experiment-card__title">MIDIWeb-Hub</h3>
         <p class="experiment-card__body">A curated directory of websites that support WebMIDI, helping musicians, makers, educators and developers discover browser-based musical tools and experiments.</p>
         <div class="experiment-card__links">
-          <a class="experiment-card__link experiment-card__link--primary" href="https://5of12.github.io/MIDIWeb-Hub/">Open Experiment</a>
+          <a class="experiment-card__link experiment-card__link--primary" href="https://5of12.github.io/MIDIWeb-Hub/">Launch</a>
           <a class="experiment-card__link" href="https://github.com/5of12/MIDIWeb-Hub">View on GitHub</a>
         </div>
       </div>
@@ -99,7 +99,7 @@ Gesture control running in your browser. Interaction from across the room using 
         <h3 class="experiment-card__title">Augment</h3>
         <p class="experiment-card__body">An Audio UX generator built with Tone.js for creating interface sounds, bleeps, bloops, clicks and pops directly in the browser.</p>
         <div class="experiment-card__links">
-          <a class="experiment-card__link experiment-card__link--primary" href="https://5of12.github.io/Augment/">Open Experiment</a>
+          <a class="experiment-card__link experiment-card__link--primary" href="https://5of12.github.io/Augment/">Launch</a>
           <a class="experiment-card__link" href="https://github.com/5of12/Augment">View on GitHub</a>
         </div>
       </div>
