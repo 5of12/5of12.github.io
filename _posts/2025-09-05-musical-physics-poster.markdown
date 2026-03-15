@@ -25,6 +25,7 @@ Unity is a great choice for this, due to its highly performant and flexible 2D &
 <video width="100%" controls loop style="border-radius: 15px" alt="">
   <source src="/assets/ADC_Playground_Clip.mp4" />
 </video>
+
 **Get Started:** link audio sources to collisions and make the engine your playground.
 
 
@@ -80,7 +81,7 @@ For example, swiping a finger over the shape in Playtonik will alter its angular
 
 It's super simple to target multiple platforms, with support for most common platforms built into the engine. Any area that the built-in tooling doesn't cover likely has a plugin, tailor-made by the vast Unity developer community.
 
-We've used plugins to handle [MIDI connectivity](https://assetstore.unity.com/packages/tools/audio/midi-plugin-for-mobile-and-desktop-198917) and [musical scale theory](https://melanchall.github.io/drywetmidi/).
+We've used plugins to handle <a href="https://assetstore.unity.com/packages/tools/audio/midi-plugin-for-mobile-and-desktop-198917">MIDI connectivity</a> and <a href="https://melanchall.github.io/drywetmidi/">musical scale theory</a>.
 
 ### Going native
 

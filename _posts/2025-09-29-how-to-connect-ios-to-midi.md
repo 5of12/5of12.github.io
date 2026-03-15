@@ -38,7 +38,7 @@ iOS supports MIDI connections across a local network. This works over WiFi and c
 
 <img src="/assets/iOSmidi/NetworkMIDISetup.png" style="border-radius: 15px" alt=""/>
 
-Ableton have a nice guide for [Setting up a virtual MIDI network](https://help.ableton.com/hc/en-us/articles/209071169-Setting-up-a-virtual-MIDI-network) which has some details of how it works on different platforms
+Ableton have a nice guide for <a href="https://help.ableton.com/hc/en-us/articles/209071169-Setting-up-a-virtual-MIDI-network">Setting up a virtual MIDI network</a> which has some details of how it works on different platforms
 
 # Bluetooth MIDI
 
@@ -76,5 +76,5 @@ Note: As of Playtonik 1.5 the app doesn't show up as a virtual MIDI port. Playto
 
 # Find out more
 
-To find out more about Playtonik check out our website [5of12.co.uk](https://www.5of12.co.uk/#Playtonik) <br>
-For examples of how we integrate Playtonik into our music check out our [Playtonik Playlist on YouTube](https://www.youtube.com/playlist?list=PL4zuBsU0ueMlLnphaBhRjQ5iLQO9R2qMJ)
+To find out more about Playtonik check out our website <a href="https://www.5of12.co.uk/#Playtonik">5of12.co.uk</a> <br>
+For examples of how we integrate Playtonik into our music check out our <a href="https://www.youtube.com/playlist?list=PL4zuBsU0ueMlLnphaBhRjQ5iLQO9R2qMJ">Playtonik Playlist on YouTube</a>

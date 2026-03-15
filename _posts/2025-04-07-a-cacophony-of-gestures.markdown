@@ -4,7 +4,7 @@ author: Pete Nancollis
 ---
 
 # TL;DR
-We built a gesture control library for Unity. One that isn’t tied to a particular source of input data and works outside XR. It is modelled on an Anticipation, Action, Reaction cycle to help development run smoothly. It’s called [Cacophony](https://github.com/5of12/cacophony) as a nod to the complexity that arises from the interactions between gestures when building applications with multiple controls.
+We built a gesture control library for Unity. One that isn’t tied to a particular source of input data and works outside XR. It is modelled on an Anticipation, Action, Reaction cycle to help development run smoothly. It’s called <a href="https://github.com/5of12/cacophony">Cacophony</a> as a nod to the complexity that arises from the interactions between gestures when building applications with multiple controls.
 
 ![Hands in a range of poses. forming confusing gestures](/assets/CacophonyOfGestures.png "Cacophony of gesturing hands")
 
@@ -60,5 +60,4 @@ With restraint and careful design however you can build some fun and engaging ap
 
 
 ## Try it yourself
-If you’ve read this far you are probably interested in trying the system out for yourself. The good news is you can! Check out the [Cacophony](https://github.com/5of12/cacophony) project on github and take a look at the example projects in our [Cacophony Playground](https://github.com/5of12/Cacophony-Playground) for some inspiration.
-
+If you’ve read this far you are probably interested in trying the system out for yourself. The good news is you can! Check out the <a href="https://github.com/5of12/cacophony">Cacophony</a> project on github and take a look at the example projects in our <a href="https://github.com/5of12/Cacophony-Playground">Cacophony Playground</a> for some inspiration.

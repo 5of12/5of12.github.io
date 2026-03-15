@@ -1,23 +1,23 @@
-# 5of12 Github Pages site
-For blogs and content relating to our projects and open source repositories.
+# 5of12 Site
 
-## Setup instructions
+This repository now builds the 5of12 site as a static SvelteKit app.
 
-The site is built with Jekyll, setup instructions here: [Jekyll Installation](https://jekyllrb.com/docs/installation/)
-That will take you through making sure Homebrew, Ruby and Jekyl are installed.
+## Development
 
-Once that's all setup install the github pages gem `gem install github-pages`
+```bash
+npm install
+npm run dev
+```
 
-### Local testing
+## Quality checks
 
-You can build and serve the files locally with Jekyll using `bundle exec jekyll serve` optionally with `--livereload`
+```bash
+npm run check
+npm run build
+```
 
-### Remote builds
+## Content
 
-Merges to main will trigger a github action to build the site using the same Jekyll config.
-
-# New Content
-
-New pages are created as Markdown files that get converted to html following the rules of the Theme.
-
-New blogs can be added by placing them in the `_posts` directory with a name formatted as `YYYY-MM-DD-title-of-blog`
+- Home and about pages live in `src/routes`
+- Journal posts remain in `_posts` and are parsed at build time
+- Static images and media are served from `static/assets/`
