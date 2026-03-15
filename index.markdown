@@ -36,3 +36,28 @@ Gesture control running in your browser. Interaction from across the room using 
   - [Warp Fingers](https://5of12.github.io/MediaPipe-Playground/examples/WarpFingers.html)
 - 🗺️ Explore mapping data with two handed gestures. Pinch and zoom!
   - [World in your Hands](https://5of12.github.io/MediaPipe-Playground/examples/WorldInYourHands.html)
+
+## Experiments
+
+We are also exploring WebAudio and WebMIDI in the browser through a growing set of musical tools, utilities and experiments.
+
+### Pocket Operations
+
+Pocket Operations is a browser-based MIDI pattern recorder for sketching drum patterns, auditioning grooves, sending them to hardware over Web MIDI, and exporting loops as `.midi` files.
+
+- Public URL: [5of12.github.io/PocketOperations](https://5of12.github.io/PocketOperations/)
+- GitHub: [github.com/5of12/PocketOperations](https://github.com/5of12/PocketOperations)
+
+### MIDIWeb-Hub
+
+MIDIWeb-Hub is a curated directory of websites that support WebMIDI, helping musicians, makers, educators and developers discover browser-based musical tools and experiments.
+
+- Public URL: [5of12.github.io/MIDIWeb-Hub](https://5of12.github.io/MIDIWeb-Hub/)
+- GitHub: [github.com/5of12/MIDIWeb-Hub](https://github.com/5of12/MIDIWeb-Hub)
+
+### Augment
+
+Augment is an Audio UX generator built with Tone.js for creating interface sounds, bleeps, bloops, clicks and pops directly in the browser.
+
+- Public URL: [5of12.github.io/Augment](https://5of12.github.io/Augment/)
+- GitHub: [github.com/5of12/Augment](https://github.com/5of12/Augment)
