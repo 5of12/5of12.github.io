@@ -1,0 +1,130 @@
+---
+---
+
+@import "minima";
+
+.home .experiments-section {
+  margin: 2.5rem 0 3rem;
+}
+
+.home .experiments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.home .experiment-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.08);
+}
+
+.home .experiment-card__image-link {
+  display: block;
+  aspect-ratio: 1440 / 1024;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.home .experiment-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.home .experiment-card__image-link:hover .experiment-card__image,
+.home .experiment-card__image-link:focus .experiment-card__image {
+  transform: scale(1.02);
+}
+
+.home .experiment-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.1rem;
+}
+
+.home .experiment-card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.home .experiment-card__body {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.home .experiment-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.home .experiment-card__link,
+.home .experiment-card__link:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 999px;
+  color: #111;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.home .experiment-card__link:hover,
+.home .experiment-card__link:focus {
+  border-color: #111;
+  text-decoration: none;
+}
+
+.home .experiment-card__link--primary,
+.home .experiment-card__link--primary:visited {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.home .experiment-card__link--primary:hover,
+.home .experiment-card__link--primary:focus {
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .home .experiments-section {
+    margin: 2rem 0 2.5rem;
+  }
+
+  .home .experiments-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .home .experiment-card__content {
+    padding: 1rem;
+  }
+
+  .home .experiment-card__links {
+    flex-direction: column;
+  }
+
+  .home .experiment-card__link,
+  .home .experiment-card__link:visited {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
