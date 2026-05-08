@@ -3,7 +3,7 @@
 
 	import { page } from '$app/state';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import { siteMeta } from '$lib/content/site';
+	import { companyInfo, siteMeta, socialLinks } from '$lib/content/site';
 
 	let { children } = $props();
 
@@ -11,11 +11,18 @@
 
 	const navigation = [
 		{ label: 'Home', href: '/' },
+		{ label: 'Work', href: '/#work' },
+		{ label: 'Services', href: '/#services' },
 		{ label: 'Blog', href: '/journal/' },
-		{ label: 'About', href: '/about/' }
+		{ label: 'About', href: '/about/' },
+		{ label: 'Contact', href: '/#contact' }
 	];
 
 	function isActive(href: string) {
+		if (href.includes('#')) {
+			return false;
+		}
+
 		if (href === '/') {
 			return currentPath === '/';
 		}
@@ -68,10 +75,30 @@
 
 	<footer class="site-footer">
 		<div class="site-footer__inner">
+			<div class="site-footer__brand">
+				<p class="site-footer__eyebrow">{companyInfo.name}</p>
+				<p class="site-footer__text">
+					UK creative technology studio building spatial, musical and web-first tools with a bias toward clarity, tactility and play.
+				</p>
+				<p class="site-footer__legal">
+					{companyInfo.registration} · Company No. {companyInfo.companyNumber}
+				</p>
+			</div>
+
 			<div class="site-footer__links">
-				<a href="mailto:info@5of12.co.uk">Contact</a>
+				<a href={`mailto:${companyInfo.email}`}>Contact</a>
 				<a href="https://github.com/5of12">GitHub</a>
 				<a href="https://5of12.co.uk">Website</a>
+				<a href={companyInfo.privacyHref}>Privacy</a>
+			</div>
+
+			<div class="site-footer__social">
+				<p class="site-footer__eyebrow">Social</p>
+				<div class="site-footer__links">
+					{#each socialLinks as social}
+						<a href={social.href}>{social.label}</a>
+					{/each}
+				</div>
 			</div>
 		</div>
 	</footer>

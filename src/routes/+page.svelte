@@ -2,12 +2,15 @@
 	import ExperimentCard from '$lib/components/ExperimentCard.svelte';
 	import IconGlyph from '$lib/components/IconGlyph.svelte';
 	import PostCard from '$lib/components/PostCard.svelte';
+	import WorkCard from '$lib/components/WorkCard.svelte';
 	import {
+		contactRoutes,
 		experiments,
 		featuredWork,
+		services,
 		siteMeta,
 		studioBeliefs,
-		studioPrinciples
+		socialLinks
 	} from '$lib/content/site';
 	import type { JournalPost } from '$lib/content/types';
 
@@ -25,14 +28,15 @@
 			<p class="section-kicker"><span>5of12</span> Creative Studio</p>
 			<h1>Calm interfaces for playful technology.</h1>
 			<p class="hero__lede">
-				We make playful, thoughtful things that live between music, design, experimentation and invention.
+				We build playful, human-designed spatial experiences, musical tools and interaction prototypes.
 			</p>
 			<p class="hero__copy">
+				From rapid prototypes to show-ready demos and production apps, 5of12 turns complex technology into things people can touch, hear and remember.
 			</p>
 
 			<div class="button-row">
-				<a class="button button--primary" href="/journal/">Read the blog</a>
-				<a class="button" href="https://5of12.co.uk">Visit 5of12.co.uk</a>
+				<a class="button button--primary" href="#work">See our work</a>
+				<a class="button" href="#contact">Contact the studio</a>
 			</div>
 		</div>
 
@@ -65,6 +69,24 @@
 	</div>
 </section>
 
+<section class="section studio-band panel">
+	<div class="studio-band__media">
+		<img src="/assets/work/studio-team.jpg" alt="The 5of12 team at a creative technology event." loading="lazy" width="1590" height="1201" />
+	</div>
+
+	<div class="studio-band__content">
+		<p class="section-kicker"><span>Studio</span> Who we are</p>
+		<h2>Creative technologists working across sound, space and software.</h2>
+		<p>
+			We are a UK studio experienced in spatial computing, audio technology and software delivery. We design and build immersive experiences for human interaction.
+		</p>
+		<div class="button-row">
+			<a class="button button--primary" href="/about/">About 5of12</a>
+			<a class="button" href="mailto:info@5of12.co.uk">Email us</a>
+		</div>
+	</div>
+</section>
+
 <!-- <section class="section">
 	<div class="section-head">
 		<div>
@@ -86,7 +108,7 @@
 	</div>
 </section> -->
 
-<section class="section">
+<section class="section" id="work">
 	<div class="section-head">
 		<div>
 			<p class="section-kicker"><span>Work</span></p>
@@ -99,23 +121,31 @@
 
 	<div class="work-grid">
 		{#each featuredWork as item}
-			<article class={`work-card tone-${item.accent}`}>
-				<p class="card-kicker">{item.eyebrow}</p>
-				<h3>{item.title}</h3>
-				<p>{item.description}</p>
+			<WorkCard {item} />
+		{/each}
+	</div>
+</section>
 
-				<ul class="metric-list">
-					{#each item.metrics as metric}
-						<li>{metric}</li>
-					{/each}
-				</ul>
+<section class="section" id="services">
+	<div class="section-head">
+		<div>
+			<p class="section-kicker"><span>Services</span></p>
+			<h2>What we help build.</h2>
+		</div>
+		<p class="section-copy">
+			Focused creative technology work for teams exploring interaction, audio and spatial interfaces.
+		</p>
+	</div>
 
-				<div class="button-row">
-					{#each item.links as link}
-						<a class="button {link === item.links[0] ? 'button--primary' : ''}" href={link.href}>
-							{link.label}
-						</a>
-					{/each}
+	<div class="service-grid">
+		{#each services as service}
+			<article class={`service-item tone-${service.accent}`}>
+				<div class="service-item__icon">
+					<IconGlyph name={service.icon} />
+				</div>
+				<div>
+					<h3>{service.title}</h3>
+					<p>{service.description}</p>
 				</div>
 			</article>
 		{/each}
@@ -136,6 +166,32 @@
 	<div class="experiment-grid">
 		{#each experiments as experiment}
 			<ExperimentCard {experiment} />
+		{/each}
+	</div>
+</section>
+
+<section class="section connect-panel panel" id="contact">
+	<div>
+		<p class="section-kicker"><span>Contact</span> Say hello</p>
+		<h2>Have a prototype, product or musical idea to realise?</h2>
+	</div>
+
+	<div class="contact-route-grid">
+		{#each contactRoutes as route}
+			<article class="contact-route">
+				<h3>{route.title}</h3>
+				<p>{route.description}</p>
+				<a class="button" href={route.href}>{route.label}</a>
+			</article>
+		{/each}
+	</div>
+
+	<div class="social-strip" aria-label="Social links">
+		{#each socialLinks as social}
+			<a href={social.href}>
+				<span>{social.label}</span>
+				<strong>{social.handle}</strong>
+			</a>
 		{/each}
 	</div>
 </section>

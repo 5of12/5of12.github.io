@@ -1,6 +1,6 @@
 <script lang="ts">
 	import IconGlyph from '$lib/components/IconGlyph.svelte';
-	import { siteMeta, studioPrinciples, studioStats } from '$lib/content/site';
+	import { companyInfo, contactRoutes, services, siteMeta, socialLinks, studioPrinciples, studioStats } from '$lib/content/site';
 </script>
 
 <svelte:head>
@@ -29,7 +29,7 @@
 			We believe in play as a serious tool, discovery as a way of working and adding MIDI where it is deemed appropriate.
 		</p>
 		<div class="button-row">
-			<a class="button button--primary" href="https://5of12.co.uk">Visit 5of12.co.uk</a>
+			<a class="button button--primary" href="/#work">See the work</a>
 			<a class="button" href="mailto:info@5of12.co.uk">Get in touch</a>
 		</div>
 	</div>
@@ -44,6 +44,25 @@
 				<p class="stat-card__value">{stat.value}</p>
 			</article>
 		{/each}
+	</div>
+</section>
+
+<section class="section about-feature panel">
+	<div class="about-feature__media">
+		<img src="/assets/work/prototyping-desk.jpg" alt="A hand testing an interactive prototype on a laptop." loading="lazy" width="1590" height="1099" />
+	</div>
+
+	<div class="about-feature__content">
+		<p class="section-kicker"><span>Services</span> Studio practice</p>
+		<h2>We make early ideas tangible enough to test.</h2>
+		<p>
+			Our work spans rapid prototypes, spatial computing, gesture systems, immersive demos, XR apps and custom tools.
+		</p>
+		<ul class="service-inline-list">
+			{#each services as service}
+				<li>{service.title}</li>
+			{/each}
+		</ul>
 	</div>
 </section>
 
@@ -65,5 +84,37 @@
 				<p>{principle.description}</p>
 			</article>
 		{/each}
+	</div>
+</section>
+
+<section class="section company-panel panel">
+	<div>
+		<p class="section-kicker"><span>Company</span> Details</p>
+		<h2>{companyInfo.name}</h2>
+		<p>{companyInfo.registration} · Company No. {companyInfo.companyNumber}</p>
+		<p>
+			For studio enquiries, Playtonik support or privacy questions, email
+			<a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>.
+		</p>
+		<div class="button-row">
+			<a class="button button--primary" href={`mailto:${companyInfo.email}`}>Contact 5of12</a>
+			<a class="button" href={companyInfo.privacyHref}>Playtonik privacy</a>
+		</div>
+	</div>
+
+	<div class="company-panel__links">
+		<div>
+			<p class="micro-label">Contact routes</p>
+			{#each contactRoutes as route}
+				<a href={route.href}>{route.title}</a>
+			{/each}
+		</div>
+
+		<div>
+			<p class="micro-label">Social</p>
+			{#each socialLinks as social}
+				<a href={social.href}>{social.label} <span>{social.handle}</span></a>
+			{/each}
+		</div>
 	</div>
 </section>
