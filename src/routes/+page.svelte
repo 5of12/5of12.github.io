@@ -60,10 +60,10 @@
 					</ul>
 				</div>
 
-				<div class="hero-console__rule">
+				<!-- <div class="hero-console__rule">
 					<p class="micro-label">Guiding principles</p>
-					<p class="hero-console__quote">Play over posturing. Curiosity over ego. Progress over perfection.</p>
-				</div>
+					<p class="hero-console__quote">Software should bring joy. Play every day. Deliver Quality.</p>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -76,7 +76,7 @@
 
 	<div class="studio-band__content">
 		<p class="section-kicker"><span>Studio</span> Who we are</p>
-		<h2>Creative technologists working across sound, space and software.</h2>
+		<h2>Creative technologists working across sound, space and play.</h2>
 		<p>
 			We are a UK studio experienced in spatial computing, audio technology and software delivery. We design and build immersive experiences for human interaction.
 		</p>
@@ -170,10 +170,10 @@
 	</div>
 </section>
 
-<section class="section connect-panel panel" id="contact">
+<section class="section connect-panel" id="contact">
 	<div>
 		<p class="section-kicker"><span>Contact</span> Say hello</p>
-		<h2>Have a prototype, product or musical idea to realise?</h2>
+		<h2>Let's build together.</h2>
 	</div>
 
 	<div class="contact-route-grid">

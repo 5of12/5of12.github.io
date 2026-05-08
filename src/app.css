@@ -312,6 +312,10 @@ select {
 	margin-top: 1.5rem;
 }
 
+.section[id] {
+	scroll-margin-top: 9rem;
+}
+
 .hero,
 .page-hero,
 .post-hero {

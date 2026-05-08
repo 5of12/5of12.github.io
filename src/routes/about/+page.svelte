@@ -87,7 +87,7 @@
 	</div>
 </section>
 
-<section class="section company-panel panel">
+<section class="section company-panel">
 	<div>
 		<p class="section-kicker"><span>Company</span> Details</p>
 		<h2>{companyInfo.name}</h2>
