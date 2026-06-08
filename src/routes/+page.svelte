@@ -86,7 +86,7 @@
 			We are a UK studio experienced in spatial computing, audio technology and software delivery. We design and build immersive experiences for human interaction.
 		</p>
 		<div class="portfolio-links" aria-label="Team portfolios">
-			<span class="micro-label">Portfolios</span>
+			<span class="micro-label">The Team</span>
 			{#each teamPortfolios as person}
 				<a
 					href={person.href}
@@ -98,9 +98,9 @@
 				</a>
 			{/each}
 		</div>
-		<p class="studio-band__company">
+		<!-- <p class="studio-band__company">
 			{companyInfo.name} · {companyInfo.registration} · Company No. {companyInfo.companyNumber}
-		</p>
+		</p> -->
 		<div class="button-row">
 			<a class="button button--primary" href="/about/">About 5of12</a>
 			<a class="button" href="mailto:info@5of12.co.uk">Email us</a>
