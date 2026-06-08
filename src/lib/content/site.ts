@@ -54,10 +54,47 @@ export type ServiceItem = {
 	icon: IconName;
 };
 
+export type PartnerItem = {
+	name: string;
+	href: string;
+	logo?: string;
+	logoClass: string;
+	wordmark?: string;
+	secondaryMark?: string;
+};
+
+export type TechnologyItem = {
+	name: string;
+	description: string;
+	href: string;
+	logo?: string;
+	logoClass: string;
+	wordmark?: string;
+};
+
+export type TeamPortfolio = {
+	name: string;
+	fullName: string;
+	href: string;
+};
+
+export type PlayExperience = {
+	title: string;
+	eyebrow: string;
+	description: string;
+	href: string;
+	linkLabel: string;
+	accent: AccentTone;
+	icon: IconName;
+};
+
+export type SocialIconName = 'instagram' | 'linkedin' | 'youtube' | 'github';
+
 export type SocialLink = {
 	label: string;
 	handle: string;
 	href: string;
+	icon: SocialIconName;
 };
 
 export type ContactRoute = {
@@ -195,7 +232,40 @@ export const studioBeliefs: BeliefItem[] = [
 	{ title: 'Bleeps, Bloops, Spline & Springs', accent: 'orange', icon: 'spark' },
 	{ title: 'Discovery as a way of working', accent: 'yellow', icon: 'compass' },
 	{ title: 'Human-made design, no AI slop', accent: 'green', icon: 'heart' },
-	{ title: 'Supporting MIDI wherever possible.', accent: 'teal', icon: 'midi' }
+	{ title: 'Add MIDI wherever possible.', accent: 'teal', icon: 'midi' }
+];
+
+export const playExperiences: PlayExperience[] = [
+	{
+		title: 'Playtonik',
+		eyebrow: 'Musical fidget toy',
+		description:
+			'A tactile iPhone and iPad instrument where physics, haptics and MIDI turn little gestures into musical motion.',
+		href: 'https://5of12.co.uk/#playtonik',
+		linkLabel: 'Explore Playtonik',
+		accent: 'coral',
+		icon: 'midi'
+	},
+	{
+		title: 'Pezzi',
+		eyebrow: 'WebXR game for VIVERSE',
+		description:
+			'Music in pieces: a cross-platform XR, desktop and mobile game built around playful listening and assembly.',
+		href: 'https://www.viverse.com/dPASDhP',
+		linkLabel: 'Play on VIVERSE',
+		accent: 'yellow',
+		icon: 'globe'
+	},
+	{
+		title: 'Unity experiments',
+		eyebrow: 'Games, hackathons and instruments',
+		description:
+			'Rapid prototypes from Meta Hackathon work to Unity games and musical instrument experiments, made to test how interaction feels.',
+		href: 'https://www.youtube.com/watch?v=gIsR3yy8NuY',
+		linkLabel: 'Watch hackathon work',
+		accent: 'teal',
+		icon: 'play'
+	}
 ];
 
 export const services: ServiceItem[] = [
@@ -237,11 +307,121 @@ export const services: ServiceItem[] = [
 	}
 ];
 
+export const partners: PartnerItem[] = [
+	{
+		name: 'Watershed',
+		href: 'https://www.watershed.co.uk',
+		logo: '/assets/partners/watershed.webp',
+		logoClass: 'watershed',
+		wordmark: 'Watershed'
+	},
+	{
+		name: 'Pervasive Media Studio',
+		href: 'https://www.watershed.co.uk/studio/',
+		logo: '/assets/partners/pervasive-media-studio.svg',
+		logoClass: 'pervasive'
+	},
+	{
+		name: 'Uno Minda',
+		href: 'https://www.unominda.com',
+		logo: '/assets/partners/uno-minda.png',
+		logoClass: 'uno-minda'
+	},
+	{
+		name: 'Distance',
+		href: 'https://distance.tech',
+		logo: '/assets/partners/distance.svg',
+		logoClass: 'distance'
+	},
+	{
+		name: 'Ultraleap + ROLI',
+		href: 'https://www.ultraleap.com',
+		logo: '/assets/partners/ultraleap.svg',
+		logoClass: 'ultraleap',
+		secondaryMark: 'ROLI'
+	},
+	{
+		name: '50Hertz',
+		href: 'https://www.50hertz.com/en/Company',
+		logo: '/assets/partners/50hertz.png',
+		logoClass: '50hertz'
+	},
+	{
+		name: 'SRT Marine',
+		href: 'https://srt-marine.com',
+		logo: '/assets/partners/srt.svg',
+		logoClass: 'SRT'
+	},	
+	{
+		name: 'HTC VIVERSE',
+		href: 'https://www.viverse.com',
+		logo: '/assets/partners/viverse.png',
+		logoClass: 'viverse',
+		wordmark: 'VIVERSE'
+	}
+];
+
+export const technologies: TechnologyItem[] = [
+	{
+		name: 'Apple',
+		description: 'Cross-platform App Store development for iPhone, iPad, Mac and Apple Vision Pro.',
+		href: 'https://developer.apple.com/',
+		logo: '/assets/technologies/apple.svg',
+		logoClass: 'apple'
+	},
+	{
+		name: 'Meta',
+		description: 'Quest 3 and Quest 3S development for spatial apps and experiences.',
+		href: 'https://developers.meta.com/horizon/',
+		logo: '/assets/technologies/meta.svg',
+		logoClass: 'meta'
+	},
+	{
+		name: 'Unity',
+		description: 'Cross-platform games, rapid prototypes and reusable creative tooling.',
+		href: 'https://unity.com/',
+		logo: '/assets/technologies/unity.svg',
+		logoClass: 'unity'
+	},
+	{
+		name: 'Threlte',
+		description: 'Svelte-native 3D and WebXR experiences for the browser.',
+		href: 'https://threlte.xyz/',
+		logoClass: 'threlte',
+		wordmark: 'Threlte'
+	},
+	{
+		name: 'Svelte',
+		description: 'Fast, accessible websites and focused interactive interfaces.',
+		href: 'https://svelte.dev/',
+		logo: '/assets/technologies/svelte.svg',
+		logoClass: 'svelte'
+	}
+];
+
+export const teamPortfolios: TeamPortfolio[] = [
+	{
+		name: 'Pete',
+		fullName: 'Pete Nancollis',
+		href: 'https://petenancollis.framer.website'
+	},
+	{
+		name: 'Tom',
+		fullName: 'Tom Cartwright',
+		href: 'https://tom-cartwright.com'
+	},
+	{
+		name: 'Ant',
+		fullName: 'Ant Nasce',
+		href: 'https://antiero.github.io/ant-portfolio/'
+	}
+];
+
 export const socialLinks: SocialLink[] = [
-	{ label: 'Instagram', handle: '@5of12studio', href: 'https://instagram.com/5of12studio' },
-	{ label: 'LinkedIn', handle: '5of12', href: 'https://www.linkedin.com/company/5of12' },
-	{ label: 'YouTube', handle: '@5of12studio', href: 'https://www.youtube.com/@5of12studio' },
-	{ label: 'GitHub', handle: '5of12', href: 'https://github.com/5of12' }
+	{ label: 'Instagram', handle: '@5of12studio', href: 'https://instagram.com/5of12studio', icon: 'instagram' },
+	{ label: 'LinkedIn', handle: '5of12', href: 'https://www.linkedin.com/company/5of12', icon: 'linkedin' },
+	{ label: 'YouTube', handle: '@5of12studio', href: 'https://www.youtube.com/@5of12studio', icon: 'youtube' },
+	{ label: 'GitHub', handle: '5of12', href: 'https://github.com/5of12', icon: 'github' }
 ];
 
 export const contactRoutes: ContactRoute[] = [

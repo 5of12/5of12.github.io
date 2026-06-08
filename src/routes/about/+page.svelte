@@ -1,6 +1,6 @@
 <script lang="ts">
 	import IconGlyph from '$lib/components/IconGlyph.svelte';
-	import { companyInfo, contactRoutes, services, siteMeta, socialLinks, studioPrinciples, studioStats } from '$lib/content/site';
+	import { services, siteMeta, studioPrinciples, studioStats } from '$lib/content/site';
 </script>
 
 <svelte:head>
@@ -84,37 +84,5 @@
 				<p>{principle.description}</p>
 			</article>
 		{/each}
-	</div>
-</section>
-
-<section class="section company-panel">
-	<div>
-		<p class="section-kicker"><span>Company</span> Details</p>
-		<h2>{companyInfo.name}</h2>
-		<p>{companyInfo.registration} · Company No. {companyInfo.companyNumber}</p>
-		<p>
-			For studio enquiries, Playtonik support or privacy questions, email
-			<a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>.
-		</p>
-		<div class="button-row">
-			<a class="button button--primary" href={`mailto:${companyInfo.email}`}>Contact 5of12</a>
-			<a class="button" href={companyInfo.privacyHref}>Playtonik privacy</a>
-		</div>
-	</div>
-
-	<div class="company-panel__links">
-		<div>
-			<p class="micro-label">Contact routes</p>
-			{#each contactRoutes as route}
-				<a href={route.href}>{route.title}</a>
-			{/each}
-		</div>
-
-		<div>
-			<p class="micro-label">Social</p>
-			{#each socialLinks as social}
-				<a href={social.href}>{social.label} <span>{social.handle}</span></a>
-			{/each}
-		</div>
 	</div>
 </section>

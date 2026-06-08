@@ -23,7 +23,6 @@
 		<h3>
 			<a href={`/journal/${post.slug}/`}>{post.title}</a>
 		</h3>
-		<p>{post.excerpt}</p>
-		<p class="post-card__author">{post.author}</p>
+		<p class="post-card__excerpt">{post.excerpt}</p>
 	</div>
 </article>

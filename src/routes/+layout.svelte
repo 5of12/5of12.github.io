@@ -2,6 +2,7 @@
 	import '../app.css';
 
 	import { page } from '$app/state';
+	import SocialIcon from '$lib/components/SocialIcon.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { companyInfo, siteMeta, socialLinks } from '$lib/content/site';
 
@@ -10,8 +11,9 @@
 	const currentPath = $derived(page.url.pathname);
 
 	const navigation = [
-		{ label: 'Home', href: '/' },
+		// { label: 'Home', href: '/' },
 		{ label: 'Work', href: '/#work' },
+		{ label: 'Play', href: '/#play' },
 		{ label: 'Services', href: '/#services' },
 		{ label: 'Blog', href: '/journal/' },
 		{ label: 'About', href: '/about/' },
@@ -62,7 +64,6 @@
 						{item.label}
 					</a>
 				{/each}
-				<a href="https://5of12.co.uk" rel="noreferrer">5of12.co.uk</a>
 			</nav>
 
 			<ThemeToggle />
@@ -78,7 +79,7 @@
 			<div class="site-footer__brand">
 				<p class="site-footer__eyebrow">{companyInfo.name}</p>
 				<p class="site-footer__text">
-					UK creative technology studio building spatial, musical and web-first tools with a bias toward clarity, tactility and play.
+					UK creative technology studio building spatial, musical and web-first tools with a focus on tactility and play.
 				</p>
 				<p class="site-footer__legal">
 					{companyInfo.registration} · Company No. {companyInfo.companyNumber}
@@ -94,9 +95,11 @@
 
 			<div class="site-footer__social">
 				<p class="site-footer__eyebrow">Social</p>
-				<div class="site-footer__links">
+				<div class="social-icon-row">
 					{#each socialLinks as social}
-						<a href={social.href}>{social.label}</a>
+						<a href={social.href} aria-label={`${social.label}: ${social.handle}`} title={social.label}>
+							<SocialIcon name={social.icon} />
+						</a>
 					{/each}
 				</div>
 			</div>
