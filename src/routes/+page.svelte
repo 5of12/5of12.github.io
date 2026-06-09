@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-	<title>{siteMeta.title} · Creative Studio</title>
+	<title>{siteMeta.title}</title>
 	<meta name="description" content={siteMeta.description} />
 </svelte:head>
 
@@ -32,7 +32,7 @@
 	<div class="hero__grid">
 		<div class="stack stack--hero">
 			<!-- <p class="section-kicker"><span>5of12</span> Creative Studio</p> -->
-			<h1>5of12 Creative Studio</h1>
+			<h1>Interactions with Music.</h1>
 			<p class="hero__lede">
 				We design playful, spatial experiences.
 			</p>
@@ -98,9 +98,6 @@
 				</a>
 			{/each}
 		</div>
-		<!-- <p class="studio-band__company">
-			{companyInfo.name} · {companyInfo.registration} · Company No. {companyInfo.companyNumber}
-		</p> -->
 		<div class="button-row">
 			<a class="button button--primary" href="/about/">About 5of12</a>
 			<a class="button" href="mailto:info@5of12.co.uk">Email us</a>
@@ -113,7 +110,7 @@
 		<p class="section-kicker"><span>Play</span></p>
 		<h2>We like to design, build and play.</h2>
 		<p>
-			5of12 builds games, instruments and spatial prototypes that invite people to poke, listen, move and discover. Our play work stretches from musical toys to XR worlds, browser experiments and Unity hackathon builds.
+			5of12 builds games, instruments and spatial prototypes that invite people to poke, listen, move and discover. Our work spans musical toys to XR worlds, browser experiments and Unity hackathon builds.
 		</p>
 		<div class="button-row">
 			<a class="button button--primary" href="#contact">Build a playful prototype</a>

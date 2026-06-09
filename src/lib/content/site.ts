@@ -229,7 +229,7 @@ export const studioStats: StatItem[] = [
 
 export const studioBeliefs: BeliefItem[] = [
 	{ title: 'Play as a serious tool', accent: 'coral', icon: 'play' },
-	{ title: 'Bleeps, Bloops, Spline & Springs', accent: 'orange', icon: 'spark' },
+	{ title: 'Bleeps, Bloops, Springs & Splines', accent: 'orange', icon: 'spark' },
 	{ title: 'Discovery as a way of working', accent: 'yellow', icon: 'compass' },
 	{ title: 'Human-made design, no AI slop', accent: 'green', icon: 'heart' },
 	{ title: 'Add MIDI wherever possible.', accent: 'teal', icon: 'midi' }

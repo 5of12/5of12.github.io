@@ -54,7 +54,7 @@
 				</span>
 				<span class="brand-lockup__copy">
 					<span class="brand-lockup__title">5of12</span>
-					<span class="brand-lockup__subtitle">Creative Studio</span>
+					<!-- <span class="brand-lockup__subtitle">Creative Studio</span> -->
 				</span>
 			</a>
 
