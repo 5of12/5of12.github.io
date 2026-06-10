@@ -37,7 +37,7 @@ XR presented a slightly larger challenge, especially as we wanted to make sure t
 
 ## Inevitable MIDI
 
-At 5of12 we have a history of integrating MIDI into our projects ([Playtonik](https://5of12.co.uk/#playtonik), [MIDIWeb](https://midiweb.cc/), [TypeTone](https://typetone.cc/), [MIDIVision](https://midivision.cc/)). From the start we wanted to do the same for Pezzi. Why create our own protocol for managing patterns of notes in a specific order when there's something fantastic already established?
+At 5of12 we have a history of integrating MIDI into our projects ([Playtonik](https://5of12.co.uk/playtonik), [MIDIWeb](https://midiweb.cc/), [TypeTone](https://typetone.cc/), [MIDIVision](https://midivision.cc/)). From the start we wanted to do the same for Pezzi. Why create our own protocol for managing patterns of notes in a specific order when there's something fantastic already established?
 
 MIDI is integrated into Pezzi in two ways:
 
