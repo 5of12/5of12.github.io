@@ -28,7 +28,6 @@ Unity is a great choice for this, due to its highly performant and flexible 2D &
 
 **Get Started:** link audio sources to collisions and make the engine your playground.
 
-
 ### Hear the space
 
 <img src="/assets/ADC_SoundAllAround.png" style="border-radius: 15px" alt=""/>
@@ -106,7 +105,6 @@ There are a number of pitfalls when working with audio in Unity. Here are some t
 - Watch out for memory management. Garbage Collection can cause lost time in your audio stream. Make sure you follow best practices and use pooling techniques when there are a lot of entities entering and leaving the scene.
 
 <img src="/assets/ADC_Profiler_View.png" style="border-radius: 15px" alt=""/>
-
 
 Also related - watch out for performance! Unity will use all the resources it can - cap the framerate!
 

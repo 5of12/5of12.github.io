@@ -23,11 +23,11 @@ We've not found a similar setup for connecting to Windows or Linux systems. If y
 
 <img src="/assets/iOSmidi/USBSetup.png" style="border-radius: 15px" alt=""/>
 
-If your iPhone or iPad has a USB-C connector, then you can also connect directly to many USB audio/MIDI interfaces, keyboards and instruments. This can limit onward connectivity with a DAW but it is great if you just want to hook up Playtonik and a synth for a quick jam. 
+If your iPhone or iPad has a USB-C connector, then you can also connect directly to many USB audio/MIDI interfaces, keyboards and instruments. This can limit onward connectivity with a DAW but it is great if you just want to hook up Playtonik and a synth for a quick jam.
 
 # Network MIDI
 
-iOS supports MIDI connections across a local network. This works over WiFi and can allow you to connect to a Mac on the same network. This is an easy solution to setup but latency will depend on the quality of the connection. MacOS has a built in solution for Network MIDI but on Windows or other plaatforms you will need to find a thirdparty solution. 
+iOS supports MIDI connections across a local network. This works over WiFi and can allow you to connect to a Mac on the same network. This is an easy solution to setup but latency will depend on the quality of the connection. MacOS has a built in solution for Network MIDI but on Windows or other plaatforms you will need to find a thirdparty solution.
 
 - In Playtonik, tap the settings cog in the top right, then select the "Session 1" device in the MIDI Input/Ouput dropdown. This is the network MIDI session
 - Open Audio Midi Settings on the Mac
@@ -42,7 +42,7 @@ Ableton have a nice guide for <a href="https://help.ableton.com/hc/en-us/article
 
 # Bluetooth MIDI
 
-Bluetooth MIDI is best for connecting direct to other instruments, but can also be used to connect to a computer. It runs on Bluetooth LE so has a small amount of latency, but is one of the easiest options to set up. 
+Bluetooth MIDI is best for connecting direct to other instruments, but can also be used to connect to a computer. It runs on Bluetooth LE so has a small amount of latency, but is one of the easiest options to set up.
 
 - Open Audio Midi Settings on the Mac
 - Open the Midi Studio Window, then tap the Bluetooth icon in the top right to get the Bluetooth setup window
@@ -63,6 +63,7 @@ If you want to try out MIDI, but don't have any external gear, all is not lost! 
 Options on iPhone are more limited as you can only run one foreground app at a time. Playtonik doesn't run in the background (to save on battery life) but some audio apps like the awesome Fugue Machine and Korg Gadget will. You can set them playing, then switch to Playtonik and send/receive MIDI with the background app. On iPad you can run two apps in the foreground with Stage Manager. With the extra screen space you can set up a side by side view of Playtonik with another MIDI enabled app and control both at once.
 
 Fugue machine example:
+
 - Open Fugue Machine and tap the ... icon in the top right
 - Enable MIDI Out via Settings screen using the "Fugue Machine MIDI Out" option
 - Pick a pattern and press play

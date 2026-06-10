@@ -1,7 +1,7 @@
-import { posts } from '$lib/server/posts';
+import { posts } from "$lib/server/posts";
 
 export function load() {
-	return {
-		posts
-	};
+  return {
+    posts,
+  };
 }

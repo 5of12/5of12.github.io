@@ -1,7 +1,7 @@
-import { getLatestPosts } from '$lib/server/posts';
+import { getLatestPosts } from "$lib/server/posts";
 
 export function load() {
-	return {
-		latestPosts: getLatestPosts(3)
-	};
+  return {
+    latestPosts: getLatestPosts(3),
+  };
 }
