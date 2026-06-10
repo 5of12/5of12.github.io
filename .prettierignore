@@ -1,0 +1,7 @@
+# Generated output
+.svelte-kit
+build
+_site
+
+# Package managers
+package-lock.json

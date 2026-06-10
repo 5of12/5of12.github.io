@@ -1,23 +1,55 @@
-# 5of12 Github Pages site
-For blogs and content relating to our projects and open source repositories.
+# 5of12 Site
 
-## Setup instructions
+This repository builds the 5of12 site as a static SvelteKit app and deploys it to GitHub Pages.
 
-The site is built with Jekyll, setup instructions here: [Jekyll Installation](https://jekyllrb.com/docs/installation/)
-That will take you through making sure Homebrew, Ruby and Jekyl are installed.
+The previous Jekyll/Ruby build has been removed. GitHub CodeQL default setup was also disabled because it was still trying to analyze Ruby even though the site no longer contains Ruby source.
 
-Once that's all setup install the github pages gem `gem install github-pages`
+## Development
 
-### Local testing
+```bash
+npm install
+npm run dev
+```
 
-You can build and serve the files locally with Jekyll using `bundle exec jekyll serve` optionally with `--livereload`
+The dev server defaults to Vite's local URL, usually `http://localhost:5173/`.
 
-### Remote builds
+## Quality checks
 
-Merges to main will trigger a github action to build the site using the same Jekyll config.
+```bash
+npm run check
+npm run build
+```
 
-# New Content
+`npm run build` writes the static site to `build/`, which is the directory uploaded by the GitHub Pages workflow.
 
-New pages are created as Markdown files that get converted to html following the rules of the Theme.
+## Content
 
-New blogs can be added by placing them in the `_posts` directory with a name formatted as `YYYY-MM-DD-title-of-blog`
+- Home and about pages live in `src/routes/`.
+- Shared site data lives in `src/lib/content/site.ts`.
+- Journal posts remain in `_posts/` and are parsed at build time.
+- Static images and media are served from `static/assets/`.
+
+## Markdown Rendering
+
+Journal posts are currently parsed from the old Jekyll-style `_posts/` directory by `src/lib/server/posts.ts`. This preserves the existing content during the Svelte transition, but it is not as capable as the previous Jekyll Markdown pipeline.
+
+For future Markdown work, consider adding mdsvex so posts can be rendered as first-class Svelte content with component support, layouts and better authoring ergonomics:
+
+- Svelte CLI mdsvex docs: https://svelte.dev/docs/cli/mdsvex
+
+Likely migration path:
+
+1. Add mdsvex to the Svelte config.
+2. Move posts from `_posts/` into a Svelte-friendly content route or content directory.
+3. Keep existing front matter fields: `title`, `author`, `date`, `coverImage`.
+4. Replace the custom Markdown parsing in `src/lib/server/posts.ts` once mdsvex owns rendering.
+
+## Deployment
+
+GitHub Pages deploys from `.github/workflows/deploy.yml` on pushes to `main`.
+
+The workflow:
+
+1. Installs Node dependencies with `npm ci`.
+2. Builds the static SvelteKit site with `npm run build`.
+3. Uploads the `build/` directory to GitHub Pages.
