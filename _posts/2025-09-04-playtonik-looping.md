@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Tom Cartwright
+coverImage: /assets/blogContent/looper/thumbnail.jpg
 ---
 
 <iframe width="100%" src="https://www.youtube.com/embed/ByBfa3axGeE?si=slml7JWGrF8-ROK1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px; aspect-ratio: 1.78"></iframe>
@@ -20,7 +21,7 @@ The Playtonik looper is a "free time" capture system for MIDI note messages. In 
 
 As we're not recording audio samples, 1ms is plenty of fidelity to capture the performed notes to be reproduced with accurate timing.
 
-![](/assets/looper/buffer_diagram.jpg)
+![](/assets/blogContent/looper/buffer_diagram.jpg)
 
 # The Problem
 
@@ -44,7 +45,7 @@ Now we're getting notes out, but they're not as we performed them - which for a 
 
 To get around this, I thought of using the playback thread as a lookahead process instead of triggering the notes directly. Each fixed update frame, the thread will run and gather all the notes that should be played in the following frame. These notes are then collected into a buffer which can be read from the main thread, meaning that each frame only plays notes that should be played in that window of time.
 
-<img src="/assets/looper/lookahead_diagram.jpg" style="width: 100%">
+<img src="/assets/blogContent/looper/lookahead_diagram.jpg" style="width: 100%">
 
 Success! The notes being played back now feel much more in time with how they were originally performed and the feature feels much more useful.
 

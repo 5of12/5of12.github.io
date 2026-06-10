@@ -2,6 +2,7 @@
 layout: post
 title: Introducing Pezzi
 author: Tom Cartwright, Ant Nasce, Pete Nancollis
+coverImage: /assets/blogContent/introducingPezzi/thumbnail.jpg
 ---
 
 5of12 is a team of developers, designers and musicians. So, when we caught wind of the VIVERSE Creator Program, we jumped at the chance to combine all the things we love and build a joyful, relaxing, music-focused puzzle game!
