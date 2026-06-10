@@ -118,7 +118,7 @@ function parsePost(filePath: string, raw: string): JournalPost {
     formattedDate: dateFormatter.format(new Date(`${date}T00:00:00Z`)),
     excerpt: extractExcerpt(content),
     html: decorateLinks(marked.parse(markdown) as string),
-    coverImage: extractCoverImage(content),
+    coverImage: data.coverImage ?? extractCoverImage(content),
     readingTime: estimateReadingTime(content),
   };
 }
