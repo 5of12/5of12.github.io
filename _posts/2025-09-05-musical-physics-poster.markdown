@@ -80,7 +80,7 @@ For example, swiping a finger over the shape in Playtonik will alter its angular
 
 It's super simple to target multiple platforms, with support for most common platforms built into the engine. Any area that the built-in tooling doesn't cover likely has a plugin, tailor-made by the vast Unity developer community.
 
-We've used plugins to handle <a href="https://assetstore.unity.com/packages/tools/audio/midi-plugin-for-mobile-and-desktop-198917">MIDI connectivity</a> and <a href="https://melanchall.github.io/drywetmidi/">musical scale theory</a>.
+We've used plugins to handle <a href="https://kshoji.github.io/Unity-MIDI-Plugin-supports/">MIDI connectivity</a> and <a href="https://melanchall.github.io/drywetmidi/">musical scale theory</a>.
 
 ### Going native
 

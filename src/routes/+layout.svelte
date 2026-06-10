@@ -127,7 +127,7 @@
       <div class="site-footer__links">
         <a href={`mailto:${companyInfo.email}`}>Contact</a>
         <a href="https://github.com/5of12">GitHub</a>
-        <a href="https://5of12.co.uk">Website</a>
+        <a href="/">Home</a>
         <a href={companyInfo.privacyHref}>Privacy</a>
       </div>
 

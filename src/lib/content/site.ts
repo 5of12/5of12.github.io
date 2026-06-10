@@ -528,5 +528,5 @@ export const companyInfo = {
   registration: "Limited Liability Partnership",
   companyNumber: "OC453996",
   email: "info@5of12.co.uk",
-  privacyHref: "https://5of12.co.uk/#privacy-policy",
+  privacyHref: "/privacy/",
 };
