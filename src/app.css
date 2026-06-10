@@ -66,7 +66,6 @@ body {
     sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  animation: ambient-drift 34s ease-in-out infinite alternate;
 }
 
 body::before {
@@ -80,23 +79,6 @@ body::before {
   background-size: 4.5rem 4.5rem;
   opacity: 0.3;
   mask-image: radial-gradient(circle at center, black 35%, transparent 95%);
-  animation: grid-drift 42s linear infinite;
-}
-
-@keyframes ambient-drift {
-  to {
-    background-position:
-      2rem -1rem,
-      -1.5rem 2rem,
-      1rem 1.5rem,
-      0 0;
-  }
-}
-
-@keyframes grid-drift {
-  to {
-    background-position: 4.5rem 4.5rem;
-  }
 }
 
 a {
