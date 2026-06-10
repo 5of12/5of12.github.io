@@ -121,7 +121,7 @@ export const featuredWork: WorkItem[] = [
 			alt: 'Playtonik physics shapes bouncing inside glowing musical containers.'
 		},
 		links: [
-			{ label: 'Visit 5of12.co.uk', href: 'https://5of12.co.uk/#playtonik' },
+			{ label: 'Explore Playtonik', href: '/playtonik/' },
 			{ label: 'App Store', href: 'https://apps.apple.com/gb/app/playtonik/id6738356927' }
 		],
 		metrics: ['2025 MIDI Innovation Award', 'Physics-driven sound', 'MIDI in and out'],
@@ -241,7 +241,7 @@ export const playExperiences: PlayExperience[] = [
 		eyebrow: 'Musical fidget toy',
 		description:
 			'A tactile iPhone and iPad instrument where physics, haptics and MIDI turn little gestures into musical motion.',
-		href: 'https://5of12.co.uk/#playtonik',
+		href: '/playtonik/',
 		linkLabel: 'Explore Playtonik',
 		accent: 'coral',
 		icon: 'midi'
