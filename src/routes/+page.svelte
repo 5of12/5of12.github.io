@@ -10,7 +10,9 @@
     experiments,
     featuredWork,
     partners,
-    playExperiences,
+    playApps,
+    playGames,
+    playPlugins,
     services,
     siteMeta,
     studioBeliefs,
@@ -40,7 +42,7 @@
       </p>
 
       <div class="button-row">
-        <a class="button button--primary" href="#work">See our work</a>
+        <a class="button button--primary" href="#play">See what we make</a>
         <a class="button" href="#contact">Contact Us</a>
       </div>
     </div>
@@ -78,131 +80,145 @@
   </div>
 </section>
 
-<section class="section studio-band panel">
-  <div class="studio-band__media">
-    <img
-      src="/assets/work/studio-team.jpg"
-      alt="The 5of12 team at a creative technology event."
-      loading="lazy"
-      width="1590"
-      height="1201"
-    />
+<section class="section section-cluster play-catalog" id="play">
+  <div class="cluster-heading">
+    <p class="section-kicker"><span>Play</span></p>
+    <h2>Apps, Games & Plugins for curious hands & ears.</h2>
+    <p>
+      Products we've released, playful worlds to explore, and new musical
+      tools currently taking shape in the studio.
+    </p>
   </div>
 
-  <div class="studio-band__content">
-    <p class="section-kicker"><span>Who we are</span></p>
-    <h2>Creative technologists working across sound, space and play.</h2>
-    <p>
-      We are a UK studio experienced in spatial computing, audio technology and
-      software delivery. We design and build immersive experiences for human
-      interaction.
-    </p>
-    <div class="portfolio-links" aria-label="Team portfolios">
-      <span class="micro-label">The Team</span>
-      {#each teamPortfolios as person}
-        <a
-          href={person.href}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`${person.fullName} portfolio`}
-        >
-          {person.name}<span aria-hidden="true">↗</span>
-        </a>
+  <div class="product-group">
+    <div class="product-group__heading">
+      <p class="section-kicker"><span>Apps</span></p>
+      <h3>Download & Play.</h3>
+    </div>
+    <div class="app-grid">
+      {#each playApps as product}
+        <article class={`app-item tone-${product.accent}`}>
+          <div class={`app-item__media app-item__media--${product.imageStyle}`}>
+            <img
+              src={product.image}
+              alt={product.imageAlt}
+              loading="lazy"
+              width="512"
+              height="512"
+            />
+          </div>
+          <div class="app-item__content">
+            <div class="app-item__meta">
+              <span>{product.status}</span>
+              <span>{product.platform}</span>
+            </div>
+            <h3>{product.title}</h3>
+            <p>{product.description}</p>
+            <div class="app-item__links">
+              {#each product.links as link}
+                <a class="app-item__link" href={link.href}
+                  >{link.label}<span aria-hidden="true"> ↗</span></a
+                >
+              {/each}
+            </div>
+          </div>
+        </article>
       {/each}
     </div>
-    <div class="button-row">
-      <a class="button button--primary" href="/about/">About 5of12</a>
-      <a class="button" href="mailto:info@5of12.co.uk">Email us</a>
+  </div>
+
+  <div class="product-group">
+    <div class="product-group__heading">
+      <p class="section-kicker"><span>Games</span></p>
+      <h3>Musical puzzles & playful prototypes.</h3>
+    </div>
+    <div class="app-grid app-grid--wide">
+      {#each playGames as product}
+        <article class={`app-item tone-${product.accent}`}>
+          <div class={`app-item__media app-item__media--${product.imageStyle}`}>
+            <img
+              src={product.image}
+              alt={product.imageAlt}
+              loading="lazy"
+              width="1280"
+              height="720"
+            />
+          </div>
+          <div class="app-item__content">
+            <div class="app-item__meta">
+              <span>{product.status}</span>
+              <span>{product.platform}</span>
+            </div>
+            <h3>{product.title}</h3>
+            <p>{product.description}</p>
+            <div class="app-item__links">
+              {#each product.links as link}
+                <a class="app-item__link" href={link.href}
+                  >{link.label}<span aria-hidden="true"> ↗</span></a
+                >
+              {/each}
+            </div>
+          </div>
+        </article>
+      {/each}
+    </div>
+  </div>
+
+  <div class="product-group">
+    <div class="product-group__heading">
+      <p class="section-kicker"><span>Plugins</span></p>
+      <h3>Tools for your favorite DAW.</h3>
+    </div>
+    <div class="app-grid app-grid--single">
+      {#each playPlugins as product}
+        <article class={`app-item tone-${product.accent}`}>
+          <div class={`app-item__media app-item__media--${product.imageStyle}`}>
+            <img
+              src={product.image}
+              alt={product.imageAlt}
+              loading="lazy"
+              width="1920"
+              height="540"
+            />
+          </div>
+          <div class="app-item__content">
+            <div class="app-item__meta">
+              <span>{product.status}</span>
+              <span>{product.platform}</span>
+            </div>
+            <h3>{product.title}</h3>
+            <p>{product.description}</p>
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+        </article>
+      {/each}
     </div>
   </div>
 </section>
 
-<section class="section play-lab panel" id="play">
-  <div class="play-lab__intro">
-    <p class="section-kicker"><span>Play</span></p>
-    <h2>We like to design, build and play.</h2>
+<section class="section section-cluster" id="work">
+  <div class="cluster-heading">
+    <p class="section-kicker"><span>Work</span></p>
+    <h2>From first sketch to finished experience.</h2>
     <p>
-      5of12 builds games, instruments and spatial prototypes that invite people
-      to poke, listen, move and discover. Our work spans musical toys to XR
-      worlds, browser experiments and Unity hackathon builds.
+      Creative technology services, a broad production toolkit and trusted
+      partners for ambitious interaction work.
     </p>
-    <div class="button-row">
-      <a class="button button--primary" href="#contact"
-        >Build a playful prototype</a
-      >
-      <a class="button" href="https://github.com/5of12">See experiments</a>
+    <div class="work-hero-media">
+      <img
+        src="/assets/work/work-hero.jpg"
+        alt="A creative technologist working with a 3D hand model and node-based material tools."
+        loading="lazy"
+        width="1589"
+        height="1099"
+      />
     </div>
   </div>
 
-  <div class="play-lab__stage" aria-label="Playful 5of12 project visuals">
-    <img
-      class="play-lab__image play-lab__image--primary"
-      src="/assets/ADC_VisualPossibilities.png"
-      alt="Abstract musical pieces floating around a waveform."
-      loading="lazy"
-      width="1920"
-      height="540"
-    />
-    <img
-      class="play-lab__image play-lab__image--secondary"
-      src="/assets/ADC_PlaygroundOfSound.png"
-      alt="A waveform leading into a playful swinging shape."
-      loading="lazy"
-      width="1920"
-      height="540"
-    />
-    <div class="play-lab__pieces" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <div class="play-list" aria-label="Play project examples">
-    {#each playExperiences as experience}
-      <article class={`play-item tone-${experience.accent}`}>
-        <div class="play-item__icon">
-          <IconGlyph name={experience.icon} />
-        </div>
-        <div>
-          <p class="card-kicker">{experience.eyebrow}</p>
-          <h3>{experience.title}</h3>
-          <p>{experience.description}</p>
-          <a href={experience.href}>{experience.linkLabel}</a>
-        </div>
-      </article>
-    {/each}
-  </div>
-</section>
-
-<!-- <section class="section">
-	<div class="section-head">
-		<div>
-			<p class="section-kicker"><span>Values</span></p>
-			<h2>Human, playful, useful and curious.</h2>
-		</div>
-	</div>
-
-	<div class="principles-grid">
-		{#each studioPrinciples as principle}
-			<article class={`principle-card tone-${principle.accent}`}>
-				<div class="principle-card__icon">
-					<IconGlyph name={principle.icon} />
-				</div>
-				<h3>{principle.title}</h3>
-				<p>{principle.description}</p>
-			</article>
-		{/each}
-	</div>
-</section> -->
-
-<section class="section" id="work">
   <div class="section-head">
     <div>
-      <p class="section-kicker"><span>Work</span></p>
-      <h2>Products, prototypes and tools.</h2>
+      <p class="section-kicker"><span>Selected work</span></p>
+      <h2>Products, prototypes and systems.</h2>
     </div>
     <p class="section-copy">A few examples from the studio.</p>
   </div>
@@ -242,12 +258,9 @@
       {/each}
     </div>
   </div>
-</section>
-
-<section class="section" id="services">
   <div class="section-head">
     <div>
-      <p class="section-kicker"><span>Services</span></p>
+      <p class="section-kicker"><span>Capabilities</span></p>
       <h2>What we help build.</h2>
     </div>
     <p class="section-copy">
@@ -321,21 +334,91 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="section-head">
-    <div>
-      <p class="section-kicker"><span>Experiments</span></p>
-      <h2>Web instruments and utilities.</h2>
-    </div>
-    <p class="section-copy">
-      WebAudio and WebMIDI tools that keep the web playful and practical.
+<section class="section section-cluster" id="research">
+  <div class="cluster-heading">
+    <p class="section-kicker"><span>R&amp;D</span></p>
+    <h2>Experiments and notes from the build process.</h2>
+    <p>
+      Experiments, prototypes and field notes from our ongoing research into
+      sound, spatial computing and new forms of interaction.
     </p>
   </div>
 
-  <div class="experiment-grid">
-    {#each experiments as experiment}
-      <ExperimentCard {experiment} />
-    {/each}
+  <div>
+    <div class="section-head">
+      <div>
+        <p class="section-kicker"><span>Blog</span></p>
+        <h2>Notes from the build process.</h2>
+      </div>
+      <p class="section-copy">Thoughts from the making.</p>
+    </div>
+
+    <div class="post-grid">
+      {#each data.latestPosts as post}
+        <PostCard {post} />
+      {/each}
+    </div>
+
+    <div class="section-cta">
+      <a class="button" href="/journal/">View all posts</a>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <div class="section-head">
+      <div>
+        <p class="section-kicker"><span>Experiments</span></p>
+        <h2>Web instruments and utilities.</h2>
+      </div>
+      <p class="section-copy">
+        WebAudio and WebMIDI tools that keep the web playful and practical.
+      </p>
+    </div>
+
+    <div class="experiment-grid">
+      {#each experiments as experiment}
+        <ExperimentCard {experiment} />
+      {/each}
+    </div>
+  </div>
+</section>
+
+<section class="section studio-band panel" id="about">
+  <div class="studio-band__media">
+    <img
+      src="/assets/work/studio-team.jpg"
+      alt="The 5of12 team at a creative technology event."
+      loading="lazy"
+      width="1590"
+      height="1201"
+    />
+  </div>
+
+  <div class="studio-band__content">
+    <p class="section-kicker"><span>About</span></p>
+    <h2>Creative technologists working across sound, space and play.</h2>
+    <p>
+      We are a UK studio experienced in spatial computing, audio technology and
+      software delivery. We design and build immersive experiences for human
+      interaction.
+    </p>
+    <div class="portfolio-links" aria-label="Team portfolios">
+      <span class="micro-label">The Team</span>
+      {#each teamPortfolios as person}
+        <a
+          href={person.href}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${person.fullName} portfolio`}
+        >
+          {person.name}<span aria-hidden="true">↗</span>
+        </a>
+      {/each}
+    </div>
+    <div class="button-row">
+      <a class="button button--primary" href="/about/">About 5of12</a>
+      <a class="button" href="mailto:info@5of12.co.uk">Email us</a>
+    </div>
   </div>
 </section>
 
@@ -365,26 +448,6 @@
         <SocialIcon name={social.icon} />
       </a>
     {/each}
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head">
-    <div>
-      <p class="section-kicker"><span>Blog</span></p>
-      <h2>Notes from the build process.</h2>
-    </div>
-    <p class="section-copy">Thoughts from the making.</p>
-  </div>
-
-  <div class="post-grid">
-    {#each data.latestPosts as post}
-      <PostCard {post} />
-    {/each}
-  </div>
-
-  <div class="section-cta">
-    <a class="button" href="/journal/">View all posts</a>
   </div>
 </section>
 
@@ -455,6 +518,245 @@
   .hero-console__details {
     display: grid;
     gap: 1rem;
+  }
+
+  .section-cluster {
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-xl);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+  }
+
+  .cluster-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 25rem);
+    gap: 1.5rem;
+    align-items: end;
+    padding-bottom: clamp(2rem, 5vw, 4rem);
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .cluster-heading .section-kicker {
+    grid-column: 1 / -1;
+  }
+
+  .cluster-heading h2 {
+    max-width: 17ch;
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    line-height: 0.96;
+    letter-spacing: -0.06em;
+    text-wrap: balance;
+  }
+
+  .cluster-heading > p:not(.section-kicker) {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .work-hero-media {
+    grid-column: 1 / -1;
+    min-height: clamp(18rem, 42vw, 34rem);
+    margin-top: clamp(0.5rem, 2vw, 1.5rem);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--bg-elevated);
+  }
+
+  .work-hero-media img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
+    object-position: center 48%;
+    transition: transform 420ms ease;
+  }
+
+  #work:hover .work-hero-media img {
+    transform: scale(1.015);
+  }
+
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: hidden;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+    border-radius: var(--radius-xl);
+    background: var(--panel);
+  }
+
+  .app-grid--single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-grid--single .app-item {
+    grid-template-columns: minmax(16rem, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .product-group + .product-group {
+    margin-top: clamp(2.5rem, 6vw, 4.5rem);
+    padding-top: clamp(1.5rem, 3vw, 2.25rem);
+    border-top: 1px solid var(--line-strong);
+  }
+
+  .product-group__heading {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .product-group__heading h3 {
+    margin: 0;
+    font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+  }
+
+  .app-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.8fr) minmax(0, 1.2fr);
+    min-width: 0;
+    min-height: 22rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--panel-strong);
+  }
+
+  .app-item::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 0.3rem;
+    background: var(--tone);
+  }
+
+  .app-item__media {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-right: 1px solid var(--line);
+    background:
+      radial-gradient(
+        circle at 50% 42%,
+        color-mix(in srgb, var(--tone) 38%, transparent),
+        transparent 58%
+      ),
+      var(--bg-elevated);
+  }
+
+  .app-item__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 280ms ease;
+  }
+
+  .app-item__media--icon,
+  .app-item__media--logo {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .app-item__media--icon img {
+    width: min(100%, 11rem);
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 24%;
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.2);
+  }
+
+  .app-item__media--logo img {
+    width: min(100%, 16rem);
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.16));
+  }
+
+  .app-item:hover .app-item__media img {
+    transform: scale(1.025);
+  }
+
+  .app-item__content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .app-item__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: auto;
+  }
+
+  .app-item__meta span {
+    padding: 0.4rem 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .app-item__meta span:first-child {
+    border-color: color-mix(in srgb, var(--tone) 55%, var(--line));
+    background: color-mix(in srgb, var(--tone) 14%, transparent);
+    color: var(--text);
+  }
+
+  .app-item h3 {
+    margin: 2rem 0 0.6rem;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+  }
+
+  .app-item p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .app-item__link {
+    display: inline-flex;
+    align-self: flex-start;
+    margin-top: 1.4rem;
+    font-weight: 750;
+    text-decoration: underline;
+    text-decoration-color: var(--tone);
+    text-underline-offset: 0.22em;
+  }
+
+  .app-item__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+    margin-top: 1.4rem;
+  }
+
+  .app-item__links .app-item__link {
+    margin-top: 0;
+  }
+
+  .app-item .coming-soon {
+    margin-top: 1.4rem;
+    color: var(--tone);
+    font-weight: 750;
   }
 
   .belief-list {
@@ -612,14 +914,6 @@
     display: grid;
     align-content: center;
     gap: 1rem;
-  }
-
-  .play-lab h2 {
-    max-width: 16ch;
-    margin: 0;
-    font-size: 2.8rem;
-    line-height: 1.02;
-    text-wrap: balance;
   }
 
   .play-lab__intro p {
@@ -784,6 +1078,18 @@
 
   .work-technologies,
   .services-partners {
+    margin-top: clamp(2.5rem, 6vw, 4.5rem);
+    padding-top: clamp(1.5rem, 3vw, 2.25rem);
+    border-top: 1px solid var(--line-strong);
+  }
+
+  .section-cluster > .section-head:not(:first-child) {
+    margin-top: clamp(2.5rem, 6vw, 4.5rem);
+    padding-top: clamp(1.5rem, 3vw, 2.25rem);
+    border-top: 1px solid var(--line-strong);
+  }
+
+  .subsection {
     margin-top: clamp(2.5rem, 6vw, 4.5rem);
     padding-top: clamp(1.5rem, 3vw, 2.25rem);
     border-top: 1px solid var(--line-strong);
@@ -989,8 +1295,23 @@
     .hero__grid,
     .studio-band,
     .play-lab,
-    .services-partners__head {
+    .services-partners__head,
+    .cluster-heading {
       grid-template-columns: 1fr;
+    }
+
+    .app-item {
+      grid-template-columns: 1fr;
+    }
+
+    .app-grid--single .app-item {
+      grid-template-columns: 1fr;
+    }
+
+    .app-item__media {
+      min-height: 14rem;
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
     }
 
     .work-grid,
@@ -1006,6 +1327,22 @@
   }
 
   @media (max-width: 720px) {
+    .app-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .product-group__heading {
+      grid-template-columns: 1fr;
+    }
+
+    .app-item {
+      min-height: 0;
+    }
+
+    .app-item__content {
+      min-height: 19rem;
+    }
+
     .work-grid,
     .experiment-grid,
     .post-grid,
@@ -1024,11 +1361,6 @@
 
     .hero-console {
       padding: 1rem;
-    }
-
-    .play-lab h2 {
-      max-width: none;
-      font-size: 2.2rem;
     }
 
     .play-lab__stage {

@@ -28,6 +28,18 @@ export type WorkItem = {
   accent: AccentTone;
 };
 
+export type PlayProduct = {
+  title: string;
+  status: "Released" | "Coming soon";
+  platform: string;
+  description: string;
+  links: Array<{ label: string; href: string }>;
+  accent: AccentTone;
+  image: string;
+  imageAlt: string;
+  imageStyle?: "icon" | "logo" | "cover";
+};
+
 export type ExperimentItem = {
   title: string;
   description: string;
@@ -117,8 +129,109 @@ export type ContactRoute = {
 export const siteMeta = {
   title: "5of12",
   description:
-    "5of12 is a UK creative technology studio building playful spatial, musical and web-first experiences.",
+    "5of12 is a UK creative technology studio building playful spatial, musical & web-first experiences.",
 };
+
+export const playApps: PlayProduct[] = [
+  {
+    title: "Playtonik",
+    status: "Released",
+    platform: "iOS",
+    description:
+      "A playful musical fidget toy where physics, haptics & deep MIDI connectivity turn small gestures into sound.",
+    links: [{ label: "Explore Playtonik", href: "/playtonik/" }],
+    accent: "coral",
+    image: "/assets/play/playtonik-icon.jpg",
+    imageAlt: "Playtonik app icon.",
+    imageStyle: "icon",
+  },
+  {
+    title: "MIDIWeb",
+    status: "Released",
+    platform: "iOS, visionOS, macOS",
+    description:
+      "A browser built for Web MIDI, making it easier to learn, explore & create with connected musical devices.",
+    links: [{ label: "Visit midiweb.cc", href: "https://midiweb.cc" }],
+    accent: "green",
+    image: "/assets/play/midiweb-icon.jpg",
+    imageAlt: "MIDIWeb app icon.",
+    imageStyle: "icon",
+  },
+  {
+    title: "TypeTone",
+    status: "Coming soon",
+    platform: "macOS, iPadOS",
+    description:
+      "A new musical typing experience that turns words, rhythm & keyboard gestures into playful sound.",
+    links: [{ label: "Visit typetone.cc", href: "https://typetone.cc" }],
+    accent: "orange",
+    image: "/assets/play/typetone-icon.png",
+    imageAlt: "TypeTone app icon.",
+    imageStyle: "icon",
+  },
+  {
+    title: "MIDIVision",
+    status: "Coming soon",
+    platform: "iOS, macOS",
+    description:
+      "Camera-powered hand tracking turns movement into expressive MIDI notes, chords & controls.",
+    links: [{ label: "Visit midivision.cc", href: "https://midivision.cc" }],
+    accent: "teal",
+    image: "/assets/play/midivision-icon.png",
+    imageAlt: "MIDIVision app icon.",
+    imageStyle: "icon",
+  },
+];
+
+export const playGames: PlayProduct[] = [
+  {
+    title: "Pezzi",
+    status: "Released",
+    platform: "WebXR, Desktop, mobile",
+    description:
+      "Music in pieces: build with blocks, solve musical puzzles & hear each tune come to life.",
+    links: [
+      { label: "Play on VIVERSE", href: "https://www.viverse.com/dPASDhP" },
+      { label: "Visit playpezzi.com", href: "https://playpezzi.com" },
+    ],
+    accent: "yellow",
+    image: "/assets/play/pezzi-logo.svg",
+    imageAlt: "Pezzi, music in pieces.",
+    imageStyle: "logo",
+  },
+  {
+    title: "Sonic Escape",
+    status: "Released",
+    platform: "Meta Quest",
+    description:
+      "A musical escape-room prototype built for the Meta Horizon Start Developer Competition 2025.",
+    links: [
+      {
+        label: "Watch the project",
+        href: "https://www.youtube.com/watch?v=gIsR3yy8NuY",
+      },
+    ],
+    accent: "teal",
+    image: "/assets/play/sonic-escape.jpg",
+    imageAlt: "Sonic Escape virtual reality game.",
+    imageStyle: "cover",
+  },
+];
+
+export const playPlugins: PlayProduct[] = [
+  {
+    title: "Phase Rider",
+    status: "Coming soon",
+    platform: "VST audio plugin",
+    description:
+      "A new 5of12 audio plugin for shaping movement and phase relationships in sound.",
+    links: [],
+    accent: "teal",
+    image: "/assets/play/phaserider-icon.png",
+    imageAlt: "Phase Rider audio plugin icon.",
+    imageStyle: "icon",
+  },
+];
 
 export const featuredWork: WorkItem[] = [
   {
@@ -503,14 +616,14 @@ export const contactRoutes: ContactRoute[] = [
   {
     title: "Studio enquiries",
     description:
-      "Immersive builds, prototypes, spatial interaction, events and research demos.",
+      "Immersive builds, prototypes, spatial interaction, events & research demos.",
     href: "mailto:info@5of12.co.uk?subject=Studio%20enquiry",
     label: "Start a project",
   },
   {
     title: "Playtonik support",
     description:
-      "App support, MIDI setup questions, feature feedback and privacy questions.",
+      "App support, MIDI setup questions, feature feedback & privacy questions.",
     href: "mailto:info@5of12.co.uk?subject=Playtonik%20support",
     label: "Contact support",
   },

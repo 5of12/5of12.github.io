@@ -12,12 +12,10 @@
   let menuOpen = $state(false);
 
   const navigation = [
-    // { label: 'Home', href: '/' },
-    { label: "Work", href: "/#work" },
     { label: "Play", href: "/#play" },
-    { label: "Services", href: "/#services" },
-    { label: "Blog", href: "/journal/" },
-    { label: "About", href: "/about/" },
+    { label: "Work", href: "/#work" },
+    { label: "R&D", href: "/#research" },
+    { label: "About", href: "/#about" },
     { label: "Contact", href: "/#contact" },
   ];
 
