@@ -2,6 +2,13 @@
   import "../app.css";
 
   import { page } from "$app/state";
+  import {
+    BriefcaseBusiness,
+    FlaskConical,
+    Play,
+    Send,
+    UsersRound,
+  } from "@lucide/svelte";
   import SocialIcon from "$lib/components/SocialIcon.svelte";
   import ThemeToggle from "$lib/components/ThemeToggle.svelte";
   import { companyInfo, siteMeta, socialLinks } from "$lib/content/site";
@@ -12,11 +19,11 @@
   let menuOpen = $state(false);
 
   const navigation = [
-    { label: "Play", href: "/#play" },
-    { label: "Work", href: "/#work" },
-    { label: "R&D", href: "/#research" },
-    { label: "About", href: "/#about" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Play", href: "/#play", icon: Play },
+    { label: "Work", href: "/#work", icon: BriefcaseBusiness },
+    { label: "R&D", href: "/#research", icon: FlaskConical },
+    { label: "About", href: "/#about", icon: UsersRound },
+    { label: "Contact", href: "/#contact", icon: Send },
   ];
 
   function isActive(href: string) {
@@ -76,13 +83,20 @@
       <div id="primary-menu" class:open={menuOpen} class="site-header__menu">
         <nav class="site-nav" aria-label="Primary">
           {#each navigation as item}
+            {@const NavIcon = item.icon}
             <a
               href={item.href}
               class:active={isActive(item.href)}
               aria-current={isActive(item.href) ? "page" : undefined}
               onclick={closeMenu}
             >
-              {item.label}
+              <NavIcon
+                class="site-nav__icon"
+                size={17}
+                strokeWidth={1.8}
+                aria-hidden="true"
+              />
+              <span>{item.label}</span>
             </a>
           {/each}
         </nav>
@@ -233,11 +247,18 @@
   }
 
   .site-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
     padding: 0.55rem 0.8rem;
     border: 1px solid transparent;
     border-radius: 999px;
     color: var(--muted);
     font-size: 0.96rem;
+  }
+
+  .site-nav :global(.site-nav__icon) {
+    flex: 0 0 auto;
   }
 
   .site-nav a.active,

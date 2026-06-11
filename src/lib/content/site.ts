@@ -195,9 +195,9 @@ export const playGames: PlayProduct[] = [
       { label: "Visit playpezzi.com", href: "https://playpezzi.com" },
     ],
     accent: "yellow",
-    image: "/assets/play/pezzi-logo.svg",
-    imageAlt: "Pezzi, music in pieces.",
-    imageStyle: "logo",
+    image: "/assets/play/pezzi-hero.jpg",
+    imageAlt: "Pezzi music in pieces game artwork on a wooden background.",
+    imageStyle: "cover",
   },
   {
     title: "Sonic Escape",
@@ -212,8 +212,8 @@ export const playGames: PlayProduct[] = [
       },
     ],
     accent: "teal",
-    image: "/assets/play/sonic-escape.jpg",
-    imageAlt: "Sonic Escape virtual reality game.",
+    image: "/assets/play/sonic-escape-hero.jpg",
+    imageAlt: "Sonic Escape virtual reality power regulation puzzle.",
     imageStyle: "cover",
   },
 ];
@@ -254,7 +254,7 @@ export const featuredWork: WorkItem[] = [
     metrics: [
       "2025 MIDI Innovation Award",
       "Physics-driven sound",
-      "MIDI in and out",
+      "MIDI Support",
     ],
     accent: "coral",
   },
@@ -270,11 +270,11 @@ export const featuredWork: WorkItem[] = [
     },
     links: [
       {
-        label: "Open playground",
+        label: "View playground",
         href: "https://5of12.github.io/MediaPipe-Playground",
       },
       {
-        label: "Try an example",
+        label: "Try it out",
         href: "https://5of12.github.io/MediaPipe-Playground/examples/WorldInYourHands.html",
       },
     ],

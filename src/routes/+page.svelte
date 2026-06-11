@@ -80,13 +80,52 @@
   </div>
 </section>
 
+<section class="section studio-band panel" id="about">
+  <div class="studio-band__media">
+    <img
+      src="/assets/work/studio-team.jpg"
+      alt="The 5of12 team at a creative technology event."
+      loading="lazy"
+      width="1590"
+      height="1201"
+    />
+  </div>
+
+  <div class="studio-band__content">
+    <p class="section-kicker"><span>About</span></p>
+    <h2>Creative technologists working across sound, space and play.</h2>
+    <p>
+      We are a UK studio experienced in spatial computing, audio technology and
+      software delivery. We design and build immersive experiences for human
+      interaction.
+    </p>
+    <div class="portfolio-links" aria-label="Team portfolios">
+      <span class="micro-label">The Team</span>
+      {#each teamPortfolios as person}
+        <a
+          href={person.href}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${person.fullName} portfolio`}
+        >
+          {person.name}<span aria-hidden="true">↗</span>
+        </a>
+      {/each}
+    </div>
+    <div class="button-row">
+      <a class="button button--primary" href="/about/">About 5of12</a>
+      <a class="button" href="mailto:info@5of12.co.uk">Email us</a>
+    </div>
+  </div>
+</section>
+
 <section class="section section-cluster play-catalog" id="play">
   <div class="cluster-heading">
     <p class="section-kicker"><span>Play</span></p>
     <h2>Apps, Games & Plugins for curious hands & ears.</h2>
     <p>
-      Products we've released, playful worlds to explore, and new musical
-      tools currently taking shape in the studio.
+      Products we've released, playful worlds to explore, and new musical tools
+      currently taking shape in the studio.
     </p>
   </div>
 
@@ -379,45 +418,6 @@
       {#each experiments as experiment}
         <ExperimentCard {experiment} />
       {/each}
-    </div>
-  </div>
-</section>
-
-<section class="section studio-band panel" id="about">
-  <div class="studio-band__media">
-    <img
-      src="/assets/work/studio-team.jpg"
-      alt="The 5of12 team at a creative technology event."
-      loading="lazy"
-      width="1590"
-      height="1201"
-    />
-  </div>
-
-  <div class="studio-band__content">
-    <p class="section-kicker"><span>About</span></p>
-    <h2>Creative technologists working across sound, space and play.</h2>
-    <p>
-      We are a UK studio experienced in spatial computing, audio technology and
-      software delivery. We design and build immersive experiences for human
-      interaction.
-    </p>
-    <div class="portfolio-links" aria-label="Team portfolios">
-      <span class="micro-label">The Team</span>
-      {#each teamPortfolios as person}
-        <a
-          href={person.href}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`${person.fullName} portfolio`}
-        >
-          {person.name}<span aria-hidden="true">↗</span>
-        </a>
-      {/each}
-    </div>
-    <div class="button-row">
-      <a class="button button--primary" href="/about/">About 5of12</a>
-      <a class="button" href="mailto:info@5of12.co.uk">Email us</a>
     </div>
   </div>
 </section>
