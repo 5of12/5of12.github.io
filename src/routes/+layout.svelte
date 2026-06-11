@@ -128,8 +128,8 @@
       <div class="site-footer__brand">
         <p class="site-footer__eyebrow">{companyInfo.name}</p>
         <p class="site-footer__text">
-          UK creative technology studio building spatial, musical and web-first
-          tools with a focus on tactility and play.
+          UK creative technology studio building spatial, musical & web-first
+          tools with a focus on tactility & play.
         </p>
         <p class="site-footer__legal">
           {companyInfo.registration} · Company No. {companyInfo.companyNumber}

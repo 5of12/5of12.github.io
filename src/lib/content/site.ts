@@ -224,7 +224,7 @@ export const playPlugins: PlayProduct[] = [
     status: "Coming soon",
     platform: "VST audio plugin",
     description:
-      "A new 5of12 audio plugin for shaping movement and phase relationships in sound.",
+      "A new 5of12 audio plugin for shaping movement & phase relationships in sound.",
     links: [],
     accent: "teal",
     image: "/assets/play/phaserider-icon.png",
@@ -238,7 +238,7 @@ export const featuredWork: WorkItem[] = [
     title: "Playtonik",
     eyebrow: "iOS musical instrument",
     description:
-      "A playful musical fidget toy for iPhone and iPad with physics, haptics and deep MIDI connectivity.",
+      "A playful musical fidget toy for iPhone/iPad with physics, haptics & deep MIDI connectivity.",
     preview: {
       type: "image",
       src: "/assets/ADC_banner.png",
@@ -262,7 +262,7 @@ export const featuredWork: WorkItem[] = [
     title: "MediaPipe Playground",
     eyebrow: "Browser interaction prototype",
     description:
-      "Gesture-led browser experiments exploring comfortable hand and body control with nothing more than a webcam.",
+      "Gesture-led browser experiments exploring comfortable hand & body control with nothing more than a webcam.",
     preview: {
       type: "image",
       src: "/assets/work/mediapipe-map.gif",
@@ -280,7 +280,7 @@ export const featuredWork: WorkItem[] = [
     ],
     metrics: [
       "Web camera only",
-      "Single and two-hand input",
+      "One/Two hand input",
       "Real-time interaction",
     ],
     accent: "yellow",
@@ -289,7 +289,7 @@ export const featuredWork: WorkItem[] = [
     title: "Cacophony",
     eyebrow: "Gesture system for Unity",
     description:
-      "A Unity gesture library built to make screen-based spatial interaction readable, reliable and fun.",
+      "A Unity gesture library built to make screen-based spatial interaction readable, reliable & fun.",
     preview: {
       type: "image",
       src: "/assets/Cacophony_banner.png",
@@ -302,7 +302,7 @@ export const featuredWork: WorkItem[] = [
     metrics: [
       "Unity-first workflow",
       "Platform-agnostic gestures",
-      "Action and reaction",
+      "Action & reaction",
     ],
     accent: "teal",
   },
@@ -312,10 +312,10 @@ export const experiments: ExperimentItem[] = [
   {
     title: "Pocket Operations",
     description:
-      "Sketch patterns, send them to hardware over Web MIDI and export loops as .midi files.",
+      "Sketch patterns, send them to hardware over Web MIDI & export loops as .midi files.",
     image: "/assets/experiments/pocket-operations-preview.png",
     imageAlt:
-      "Pocket Operations screenshot showing pattern categories, transport controls and a grid sequencer.",
+      "Pocket Operations screenshot showing pattern categories, transport controls & a grid sequencer.",
     href: "https://5of12.github.io/PocketOperations/",
     github: "https://github.com/5of12/PocketOperations",
     accent: "orange",
@@ -323,7 +323,7 @@ export const experiments: ExperimentItem[] = [
   {
     title: "MIDIWeb-Hub",
     description:
-      "A curated directory of browser-based musical tools, utilities and WebMIDI experiments.",
+      "A curated directory of browser-based musical tools, utilities & WebMIDI experiments.",
     image: "/assets/experiments/midiweb-hub-preview.png",
     imageAlt:
       "MIDIWeb-Hub screenshot showing tagged cards in a WebMIDI directory.",
@@ -334,10 +334,10 @@ export const experiments: ExperimentItem[] = [
   {
     title: "Augment",
     description:
-      "An Audio UX generator for polished clicks, pops and small expressive cues built in the browser.",
+      "An Audio UX generator for polished clicks, pops & small expressive cues built in the browser.",
     image: "/assets/experiments/augment-preview.png",
     imageAlt:
-      "Augment screenshot showing interface sound controls, waveform preview and export button.",
+      "Augment screenshot showing interface sound controls, waveform preview & export button.",
     href: "https://5of12.github.io/Augment/",
     github: "https://github.com/5of12/Augment",
     accent: "teal",
@@ -347,25 +347,25 @@ export const experiments: ExperimentItem[] = [
 export const studioPrinciples: PrincipleItem[] = [
   {
     title: "Human",
-    description: "Designed with care, taste and feeling.",
+    description: "Designed with care, taste & feeling.",
     accent: "coral",
     icon: "heart",
   },
   {
     title: "Playful",
-    description: "Inviting experimentation and surprise.",
+    description: "Inviting experimentation & surprise.",
     accent: "yellow",
     icon: "play",
   },
   {
     title: "Useful",
-    description: "Built to be touched, heard and explored.",
+    description: "Built to be touched, heard & explored.",
     accent: "green",
     icon: "hand",
   },
   {
     title: "Curious",
-    description: "Unafraid of odd ideas and unexpected turns.",
+    description: "Unafraid of odd ideas & unexpected turns.",
     accent: "teal",
     icon: "compass",
   },
@@ -398,7 +398,7 @@ export const playExperiences: PlayExperience[] = [
     title: "Playtonik",
     eyebrow: "Musical fidget toy",
     description:
-      "A tactile iPhone and iPad instrument where physics, haptics and MIDI turn little gestures into musical motion.",
+      "A tactile iPhone/iPad instrument where physics, haptics & MIDI turn little gestures into musical motion.",
     href: "/playtonik/",
     linkLabel: "Explore Playtonik",
     accent: "coral",
@@ -408,7 +408,7 @@ export const playExperiences: PlayExperience[] = [
     title: "Pezzi",
     eyebrow: "WebXR game for VIVERSE",
     description:
-      "Music in pieces: a cross-platform XR, desktop and mobile game built around playful listening and assembly.",
+      "Music in pieces: a cross-platform XR, desktop & mobile game built around playful listening & assembly.",
     href: "https://www.viverse.com/dPASDhP",
     linkLabel: "Play on VIVERSE",
     accent: "yellow",
@@ -416,9 +416,9 @@ export const playExperiences: PlayExperience[] = [
   },
   {
     title: "Unity experiments",
-    eyebrow: "Games, hackathons and instruments",
+    eyebrow: "Games, hackathons & instruments",
     description:
-      "Rapid prototypes from Meta Hackathon work to Unity games and musical instrument experiments, made to test how interaction feels.",
+      "Rapid prototypes from Meta Hackathon work to Unity games & musical instrument experiments, made to test how interaction feels.",
     href: "https://www.youtube.com/watch?v=gIsR3yy8NuY",
     linkLabel: "Watch hackathon work",
     accent: "teal",
@@ -430,42 +430,42 @@ export const services: ServiceItem[] = [
   {
     title: "Rapid prototypes",
     description:
-      "Early technical proofs, design prototypes and show-ready demos for ideas that need to be felt before they can be judged.",
+      "Early technical proofs, design prototypes & show-ready demos for ideas that need to be felt before they can be judged.",
     accent: "coral",
     icon: "spark",
   },
   {
     title: "Spatial computing",
     description:
-      "XR, AR and mobile apps using hand tracking, gaze, haptics, scene understanding and spatial UX.",
+      "XR and mobile apps using hand tracking, gaze, haptics, scene understanding & spatial UX.",
     accent: "yellow",
     icon: "globe",
   },
   {
     title: "Novel interaction systems",
     description:
-      "Gesture vocabularies, mid-air UI, touchless controls and multi-modal input systems for screens and spaces.",
+      "Gesture vocabularies, mid-air UI, touchless controls & multi-modal input systems for screens & spaces.",
     accent: "teal",
     icon: "hand",
   },
   {
     title: "Immersive demos",
     description:
-      "Event, exhibition and executive demos that make technical value clear, robust and memorable.",
+      "Event, exhibition & executive demos that make technical value clear, robust & memorable.",
     accent: "orange",
     icon: "immersive",
   },
   {
     title: "XR app development",
     description:
-      "RealityKit, ARKit and Unity builds from concept through implementation, polish and release.",
+      "RealityKit, ARKit & Unity builds from concept through implementation, polish & release.",
     accent: "green",
     icon: "compass",
   },
   {
-    title: "Tools, plugins and SDKs",
+    title: "Tools, plugins & SDKs",
     description:
-      "Audio plugins, Unity utilities, browser tools and developer SDKs that turn prototypes into reusable systems.",
+      "Audio plugins, Unity utilities, browser tools & developer SDKs that turn prototypes into reusable systems.",
     accent: "teal",
     icon: "midi",
   },
@@ -529,7 +529,7 @@ export const technologies: TechnologyItem[] = [
   {
     name: "Apple",
     description:
-      "Cross-platform App Store development for iPhone, iPad, Mac and Apple Vision Pro.",
+      "Cross-platform App Store development for iPhone, iPad, Mac & Apple Vision Pro.",
     href: "https://developer.apple.com/",
     logo: "/assets/technologies/apple.svg",
     logoClass: "apple",
@@ -537,7 +537,7 @@ export const technologies: TechnologyItem[] = [
   {
     name: "Meta",
     description:
-      "Quest 3 and Quest 3S development for spatial apps and experiences.",
+      "Quest 3 and Quest 3S development for spatial apps & experiences.",
     href: "https://developers.meta.com/horizon/",
     logo: "/assets/technologies/meta.svg",
     logoClass: "meta",
@@ -545,14 +545,14 @@ export const technologies: TechnologyItem[] = [
   {
     name: "Unity",
     description:
-      "Cross-platform games, rapid prototypes and reusable creative tooling.",
+      "Cross-platform games, rapid prototypes & reusable creative tooling.",
     href: "https://unity.com/",
     logo: "/assets/technologies/unity.svg",
     logoClass: "unity",
   },
   {
     name: "Threlte",
-    description: "Svelte-native 3D and WebXR experiences for the browser.",
+    description: "Svelte-native 3D & WebXR experiences for the browser.",
     href: "https://threlte.xyz/",
     logoClass: "threlte",
     wordmark: "Threlte",
@@ -560,7 +560,7 @@ export const technologies: TechnologyItem[] = [
   {
     name: "Svelte",
     description:
-      "Fast, accessible websites and focused interactive interfaces.",
+      "Fast, accessible websites & focused interactive interfaces.",
     href: "https://svelte.dev/",
     logo: "/assets/technologies/svelte.svg",
     logoClass: "svelte",
@@ -630,7 +630,7 @@ export const contactRoutes: ContactRoute[] = [
   {
     title: "Open source",
     description:
-      "Cacophony, MediaPipe Playground and browser-based music tools.",
+      "Cacophony, MediaPipe Playground & browser-based music tools.",
     href: "https://github.com/5of12",
     label: "View GitHub",
   },

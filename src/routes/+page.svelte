@@ -37,8 +37,8 @@
       <h1>Interactions with Music.</h1>
       <p class="hero__lede">We design playful, spatial experiences.</p>
       <p class="hero__copy">
-        From rapid prototypes to show-ready demos and production apps, we turn
-        complex technology into things people can feel.
+        From rapid prototypes to show-ready demos & production apps, we turn
+        complex technology into things you can feel.
       </p>
 
       <div class="button-row">
@@ -93,10 +93,10 @@
 
   <div class="studio-band__content">
     <p class="section-kicker"><span>About</span></p>
-    <h2>Creative technologists working across sound, space and play.</h2>
+    <h2>Creative technologists working across sound, space & play.</h2>
     <p>
-      We are a UK studio experienced in spatial computing, audio technology and
-      software delivery. We design and build immersive experiences for human
+      We are a UK studio experienced in spatial computing, audio technology &
+      software delivery. We design & build immersive experiences for human
       interaction.
     </p>
     <div class="portfolio-links" aria-label="Team portfolios">
@@ -124,7 +124,7 @@
     <p class="section-kicker"><span>Play</span></p>
     <h2>Apps, Games & Plugins for curious hands & ears.</h2>
     <p>
-      Products we've released, playful worlds to explore, and new musical tools
+      Products we've released, playful worlds to explore, & new musical tools
       currently taking shape in the studio.
     </p>
   </div>
@@ -240,13 +240,13 @@
     <p class="section-kicker"><span>Work</span></p>
     <h2>From first sketch to finished experience.</h2>
     <p>
-      Creative technology services, a broad production toolkit and trusted
+      Creative technology services, a broad production toolkit & trusted
       partners for ambitious interaction work.
     </p>
     <div class="work-hero-media">
       <img
         src="/assets/work/work-hero.jpg"
-        alt="A creative technologist working with a 3D hand model and node-based material tools."
+        alt="A creative technologist working with a 3D hand model & node-based material tools."
         loading="lazy"
         width="1589"
         height="1099"
@@ -257,9 +257,9 @@
   <div class="section-head">
     <div>
       <p class="section-kicker"><span>Selected work</span></p>
-      <h2>Products, prototypes and systems.</h2>
+      <h2>Products, prototypes & systems.</h2>
     </div>
-    <p class="section-copy">A few examples from the studio.</p>
+    <!-- <p class="section-copy">A few examples from the studio.</p> -->
   </div>
 
   <div class="work-grid">
@@ -304,7 +304,7 @@
     </div>
     <p class="section-copy">
       Focused creative technology work for teams exploring interaction, audio
-      and spatial interfaces.
+      & spatial interfaces.
     </p>
   </div>
 
@@ -329,8 +329,8 @@
         <h3>Who we work with.</h3>
       </div>
       <p>
-        Teams and organisations we have collaborated with across creative
-        technology, mobility, energy, music and spatial computing.
+        Companies & teams we've collaborated with across creative
+        technology, mobility, energy, music & spatial computing.
       </p>
     </div>
 
@@ -387,9 +387,8 @@
     <div class="section-head">
       <div>
         <p class="section-kicker"><span>Blog</span></p>
-        <h2>Notes from the build process.</h2>
+        <h2>Notes from the Lab.</h2>
       </div>
-      <p class="section-copy">Thoughts from the making.</p>
     </div>
 
     <div class="post-grid">
@@ -407,10 +406,10 @@
     <div class="section-head">
       <div>
         <p class="section-kicker"><span>Experiments</span></p>
-        <h2>Web instruments and utilities.</h2>
+        <h2>Web instruments & utilities.</h2>
       </div>
       <p class="section-copy">
-        WebAudio and WebMIDI tools that keep the web playful and practical.
+        WebMIDI & WebAudio tools that keep the web musical & playful.
       </p>
     </div>
 
