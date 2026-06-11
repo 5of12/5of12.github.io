@@ -14,7 +14,7 @@
     {
       title: "Musical physics",
       description:
-        "Each note becomes a floating, bouncy object. Touch and motion controls let you move and spin the shapes that contain them.",
+        "Each note becomes a floating, bouncy object. Touch & motion controls let you move & spin the shapes that contain them.",
       icon: "spark",
       accent: "coral",
     },
@@ -36,7 +36,7 @@
 
   const performanceTools = [
     "Scale-mapped keyboard to keep performances in tune",
-    "Visible velocity and expressive note control",
+    "Visible velocity & expressive note control",
     "Strum gestures for quick note sequences",
     "Latched notes that keep the shapes moving",
     "Tap sequencing using the selected scale",
@@ -57,7 +57,7 @@
   <title>Playtonik · {siteMeta.title}</title>
   <meta
     name="description"
-    content="Playtonik is a MIDI Innovation Award-winning musical fidget app for iPhone and iPad, built around physics, spatial audio, haptics and MIDI."
+    content="Playtonik is a MIDI Innovation Award-winning musical fidget app for iPhone/iPad, built around physics, spatial audio, haptics & MIDI."
   />
 </svelte:head>
 
@@ -66,12 +66,10 @@
     <p class="section-kicker"><span>Playtonik</span> iOS musical instrument</p>
     <h1>Physics you can play.</h1>
     <p class="playtonik-hero__lede">
-      A musical fidget app where bouncing shapes become sound, space and touch.
+      A musical fidget app where bouncing shapes become sound, space & touch.
     </p>
     <p class="playtonik-hero__body">
-      Playtonik is a 2025 MIDI Innovation Award-winning instrument for iPhone
-      and iPad. Play immediately, then connect MIDI and Playtonik Pro when you
-      want deeper control.
+      Playtonik is a 2025 MIDI Innovation Award-winning instrument for iPhone/iPad. Tap, Shake & Play, then connect MIDI & Playtonik Pro for deeper control.
     </p>
     <div class="button-row">
       <a class="button button--primary" href={appStoreHref}
@@ -84,7 +82,7 @@
   <div class="playtonik-hero__award">
     <img
       src="/assets/work/playtonik-award.png"
-      alt="Playtonik app icon and 2025 MIDI Innovation Awards winner mark."
+      alt="Playtonik app icon & 2025 MIDI Innovation Awards winner mark."
       width="505"
       height="238"
     />
@@ -107,7 +105,7 @@
   </div>
   <p>
     Playtonik turns a familiar keyboard into a small physics playground. Notes
-    ricochet inside responsive shapes, making sound where they collide and
+    ricochet inside responsive shapes, making sound where they collide &
     feeding that movement back through the device.
   </p>
 </section>
@@ -130,16 +128,16 @@
 <section class="section media-feature panel">
   <div class="media-feature__copy">
     <p class="section-kicker"><span>Interaction</span></p>
-    <h2>Tap, strum, spin and move.</h2>
+    <h2>Tap, strum, spin & move.</h2>
     <p>
       Playtonik is designed for direct, expressive play. Use touch, device
       motion or an external keyboard, then shape the result with velocity,
-      latching and looping tools.
+      latching & looping tools.
     </p>
   </div>
   <img
     src="/assets/ADC_Interactions.png"
-    alt="Playtonik interaction modes including touch, motion, phone and MIDI keyboard input."
+    alt="Playtonik interaction modes including touch, motion, phone & MIDI keyboard input."
     width="1920"
     height="540"
     loading="lazy"
@@ -161,7 +159,7 @@
 
   <div class="performance-section__copy">
     <p class="section-kicker"><span>Performance</span></p>
-    <h2>Tools for finding a phrase and keeping it moving.</h2>
+    <h2>Tools for finding a phrase & keeping it moving.</h2>
     <ul>
       {#each performanceTools as tool}
         <li>{tool}</li>
@@ -173,19 +171,19 @@
 <section class="section midi-section panel">
   <div class="midi-section__head">
     <div>
-      <p class="section-kicker"><span>MIDI</span> Input and output</p>
+      <p class="section-kicker"><span>MIDI</span> Input & output</p>
       <h2>Connect a keyboard, another instrument, or both.</h2>
     </div>
     <p>
-      Trigger Playtonik from external hardware, send its notes elsewhere, and
-      filter incoming MIDI to the selected scale. Note and CC input are included
+      Trigger Playtonik from external hardware, send its notes elsewhere,
+      filter incoming MIDI to the selected scale. Note & CC input are included
       in every version, with additional control available in Playtonik Pro.
     </p>
   </div>
 
   <img
     src="/assets/ADC_AlwaysMidi.png"
-    alt="Playtonik connected by MIDI to a keyboard and control surface."
+    alt="Playtonik connected by MIDI to a keyboard & control surface."
     width="1920"
     height="540"
     loading="lazy"
@@ -229,7 +227,7 @@
   <div class="playtonik-links__list">
     <a href="/journal/how-to-connect-ios-to-midi/">
       <span>MIDI setup guide</span>
-      <strong>Connect iOS to hardware and software instruments</strong>
+      <strong>Connect iOS to hardware & software instruments</strong>
     </a>
     <a
       href="https://www.youtube.com/playlist?list=PL4zuBsU0ueMlLnphaBhRjQ5iLQO9R2qMJ"
@@ -238,7 +236,7 @@
       <strong>Hear how we use Playtonik in our own music</strong>
     </a>
     <a href={supportHref}>
-      <span>Support and feedback</span>
+      <span>Support & feedback</span>
       <strong>Talk directly to the people who built it</strong>
     </a>
   </div>

@@ -12,17 +12,17 @@
   <title>About · {siteMeta.title}</title>
   <meta
     name="description"
-    content="About 5of12, a UK Creative Technology Studio working across interaction, audio, XR and browser-based prototypes."
+    content="About 5of12, a UK Creative Technology Studio working across interaction, audio, XR & browser-based prototypes."
   />
 </svelte:head>
 
 <section class="page-hero panel">
   <p class="section-kicker"><span>About</span> 5of12</p>
-  <h1>Playful, thoughtful things for music, design and invention.</h1>
+  <h1>Playful, thoughtful things for music, design & invention.</h1>
   <p class="page-intro">
     5of12 is a creative technology studio based in the UK, formed by
     ex-Ultraleap collaborators with more than fifteen years of combined product
-    and interaction experience.
+    & interaction experience.
   </p>
 </section>
 
@@ -30,8 +30,8 @@
   <div class="stack">
     <h2>What we do</h2>
     <p>
-      We design and prototype spatial interaction systems, XR experiences,
-      playful musical tools and screen-based experiments that make emerging
+      We design & prototype spatial interaction systems, XR experiences,
+      playful musical tools & screen-based experiments that make emerging
       technology feel approachable.
     </p>
     <p>
@@ -73,7 +73,7 @@
     <h2>We make early ideas tangible enough to test.</h2>
     <p>
       Our work spans rapid prototypes, spatial computing, gesture systems,
-      immersive demos, XR apps and custom tools.
+      immersive demos, XR apps & custom tools.
     </p>
     <ul class="service-inline-list">
       {#each services as service}
