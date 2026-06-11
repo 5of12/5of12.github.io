@@ -376,10 +376,10 @@
 <section class="section section-cluster" id="research">
   <div class="cluster-heading">
     <p class="section-kicker"><span>R&amp;D</span></p>
-    <h2>Experiments and notes from the build process.</h2>
+    <h2>Experiments & notes from the build process.</h2>
     <p>
-      Experiments, prototypes and field notes from our ongoing research into
-      sound, spatial computing and new forms of interaction.
+      Experiments, prototypes & field notes from our ongoing research into
+      sound, spatial computing & new forms of interaction.
     </p>
   </div>
 
