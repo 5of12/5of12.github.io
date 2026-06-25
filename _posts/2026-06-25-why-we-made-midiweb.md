@@ -62,7 +62,7 @@ We've had people supporting MIDIWeb directly through <a href="https://buymeacoff
 
 <a href="https://midiwebhub.com">MIDIWeb Hub</a> started as a simple companion idea: if MIDIWeb helps you run WebMIDI sites, there should be a friendly place to find good WebMIDI sites in the first place.
 
-So we started collecting them... 🤓
+So we began collecting them... 🤓
 
 Synths. Editors. Sequencers. Utilities. Experiments. Tiny tools. Odd little gems from across the web.
 
@@ -83,7 +83,7 @@ A recent highlight was seeing MIDIWeb get a plug on teenage engineering’s <a h
 
 A lot of MIDIWeb’s spirit comes from the kind of world teenage engineering products encourage: small devices, direct interaction, playful constraints, clever workflows and tools that invite you to try things rather than read a manual for an hour.
 
-Chatting with Tobias also gave use the kick to test out and fix up some bugs... turns out not all WebMIDI sites are created equal
+Chatting with Tobias also gave use the push to test out and fix up some bugs... turns out not all WebMIDI sites are created equal
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DKzWTOJU-tU?si=k2bg5574U470xRm7" title="teenage engineering midnight operations" frameborder="0" allow="autoplay; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -115,7 +115,7 @@ MIDIWeb Browser is still growing and new features are on the roadmap - there are
 
 We want it to become a better browser for musicians. We want MIDIWebHub to become a more useful map of the WebMIDI world. We want to keep improving compatibility, polishing the interface and making the app feel at home across Apple platforms.
 
-<a href="https://midi.org/new-midi-2-0-transports-ble-web-midi-and-transport-remote-management">MIDI 2.0 is out</a> which means WebMIDI is coming too - and we want to make sure there's a browser available to support it from the start!
+<a href="https://midi.org/new-midi-2-0-transports-ble-web-midi-and-transport-remote-management">MIDI 2.0 is out</a> which means WebMIDI is coming too - and we want to make sure there's a browser available to support it from the off!
 
 We also want to keep the project sustainable. MIDIWeb has been supported by people buying us coffees, <a href="https://midiweb.cc/feedback/">sending feedback</a>, contributing links and telling us when something doesn't work. That support gives us the time and confidence to keep going.
 
