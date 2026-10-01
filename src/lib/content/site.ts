@@ -151,7 +151,7 @@ export const playApps: PlayProduct[] = [
     platform: "iOS, visionOS, macOS",
     description:
       "A browser built for Web MIDI, making it easier to learn, explore & create with connected musical devices.",
-    links: [{ label: "Visit midiweb.cc", href: "https://midiweb.cc" }],
+    links: [{ label: "Visit midiweb.app", href: "https://midiweb.app" }],
     accent: "green",
     image: "/assets/play/midiweb-icon.jpg",
     imageAlt: "MIDIWeb app icon.",

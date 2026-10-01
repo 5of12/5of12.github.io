@@ -7,7 +7,7 @@ coverImage: /assets/blogContent/whymidiweb/app.jpg
 <img src="/assets/blogContent/whymidiweb/hero.png" style="border-radius: 15px" alt=""/>
 
 <em>Every now and then we run into a problem that feels small on the surface but scratches a real itch...</em>
-<a href="https://midiwebc.cc">MIDIWeb</a> started as one of those problems - a chat with a friend who asked:
+<a href="https://midiweb.app">MIDIWeb</a> started as one of those problems - a chat with a friend who asked:
 
 <em>"Why can't I connect my OP-XY to my iPad and use this website?!"</em>
 
@@ -117,7 +117,7 @@ We want it to become a better browser for musicians. We want MIDIWebHub to becom
 
 <a href="https://midi.org/new-midi-2-0-transports-ble-web-midi-and-transport-remote-management">MIDI 2.0 is out</a> which means WebMIDI is coming too - and we want to make sure there's a browser available to support it from the off!
 
-We also want to keep the project sustainable. MIDIWeb has been supported by people buying us coffees, <a href="https://midiweb.cc/feedback/">sending feedback</a>, contributing links and telling us when something doesn't work. That support gives us the time and confidence to keep going.
+We also want to keep the project sustainable. MIDIWeb has been supported by people buying us coffees, <a href="https://midiweb.app/feedback/">sending feedback</a>, contributing links and telling us when something doesn't work. That support gives us the time and confidence to keep going.
 
 The web is full of strange, useful, playful musical things. 
 
@@ -127,5 +127,5 @@ If you have an Apple device and a MIDI controller, you should be able to join in
 </a>
 <a href="https://apps.apple.com/us/app/midiweb-browser/id6757226617">Go to the App Store</a> and explore <a href="https://midiwebhub.com">MIDIWebHub</a>
 
-<https://midiweb.cc/>  
+<https://midiweb.app/>  
 <https://midiwebhub.com/>
