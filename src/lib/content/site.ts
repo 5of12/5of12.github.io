@@ -581,7 +581,7 @@ export const teamPortfolios: TeamPortfolio[] = [
   {
     name: "Ant",
     fullName: "Ant Nasce",
-    href: "https://antiero.github.io/ant-portfolio/",
+    href: "https://antcv.space",
   },
 ];
 
